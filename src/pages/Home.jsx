@@ -17,15 +17,25 @@ export default function Home() {
   };
 
   return (
-    <>
+    <div className="bg-slate-50">
       <Hero />
-      <ProblemExplorer onIssue={chooseIssue} />
-      <Services />
+      <div className="home-section home-section-white">
+        <ProblemExplorer onIssue={chooseIssue} />
+      </div>
+      <div className="home-section home-section-muted">
+        <Services />
+      </div>
       <QueryForm selectedIssue={selectedIssue} />
-      <Tracker />
-      <WhyUs />
-      <SocialProof />
+      <div className="home-section home-section-white">
+        <Tracker />
+      </div>
+      <div className="home-section home-section-muted">
+        <WhyUs />
+      </div>
+      <div className="home-section home-section-white">
+        <SocialProof />
+      </div>
       <FinalCTA />
-    </>
+    </div>
   );
 }

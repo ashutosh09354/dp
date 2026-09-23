@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Plus, Star } from "lucide-react";
 
-import testimonialImage from "../../assets/testimonial.png";
-import testimonialImage3 from "../../assets/testimonial3.png";  
-import testimonialImage2 from "../../assets/testimonial2.png";
+const testimonialImage = "/assets/testimonial.png";
+const testimonialImage3 = "/assets/testimonial3.png";
+const testimonialImage2 = "/assets/testimonial2.png";
 import { faqs } from "../../data/constants";
 
 const testimonials = [

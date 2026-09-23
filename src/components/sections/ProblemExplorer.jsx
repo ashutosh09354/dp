@@ -5,7 +5,10 @@ export default function ProblemExplorer({ onIssue }) {
   return (
     <section className="section-shell py-10 md:py-12 lg:py-14" id="services">
       <div className="flex items-end justify-between gap-4">
-        <h2 className="section-title">Facing any of these banking problems?</h2>
+        <div>
+          <p className="eyebrow">Select your concern</p>
+          <h2 className="section-title mt-2">Facing any of these banking problems?</h2>
+        </div>
         <a
           href="#services"
           className="hidden shrink-0 text-sm font-bold text-brand-500 md:inline-flex items-center gap-1 hover:underline"

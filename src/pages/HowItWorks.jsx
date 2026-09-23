@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, CheckCircle2, FileText, Headphones, MessageCircle, Play, Search, Smartphone, X } from "lucide-react";
-import videoPoster from "../assets/laptop-support.png";
+const videoPoster = "/assets/laptop-support.png";
 import { issues } from "../data/constants";
 
 // Replace this URL with the final Dispute Paisa walkthrough when it is available.
@@ -28,15 +28,15 @@ export default function HowItWorks() {
 
   return (
     <>
-      <main className="min-h-screen bg-white">
+      <main className="how-page min-h-screen bg-white">
         {/* Phone layout: preserve the easy-to-scan stacked journey. */}
         <div className="md:hidden">
-          <section className="section-soft">
+          <section className="how-hero section-soft">
             <div className="section-shell py-16 text-center">
             <p className="eyebrow justify-center">How it works</p>
             <h1 className="mx-auto mt-4 max-w-4xl text-4xl font-extrabold tracking-[-.05em] text-brand-900 md:text-6xl">
               From Your Banking Problem
-              <span className="block text-brand-500">To the Next Step.</span>
+              <span className="block text-brand-500">To the Next Step</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-600">
               Watch our short walkthrough to understand how we help with your banking concern.
@@ -45,7 +45,7 @@ export default function HowItWorks() {
             <button
               type="button"
               onClick={() => setIsVideoOpen(true)}
-              className="group relative mx-auto mt-10 block w-full max-w-4xl overflow-hidden rounded-3xl bg-brand-900 text-left shadow-[0_20px_55px_rgba(8,41,79,0.22)] focus-visible:outline focus-visible:outline-4 focus-visible:outline-brand-300"
+              className="how-video group relative mx-auto mt-10 block w-full max-w-4xl overflow-hidden rounded-3xl bg-brand-900 text-left shadow-[0_20px_55px_rgba(8,41,79,0.22)] focus-visible:outline focus-visible:outline-4 focus-visible:outline-brand-300"
               aria-label="Play the How Dispute Paisa works video"
             >
               <img src={videoPoster} alt="Video preview of Dispute Paisa support" className="aspect-video w-full object-cover opacity-65 transition duration-300 group-hover:scale-[1.03] group-hover:opacity-50" />
@@ -58,7 +58,7 @@ export default function HowItWorks() {
             </button>
             </div>
           </section>
-          <section className="section-shell py-16">
+          <section className="how-mobile-journey section-shell py-16">
             <div className="mx-auto max-w-4xl">
             <h2 className="text-center text-3xl font-extrabold tracking-[-.03em] text-brand-900">What happens next</h2>
             <div className="mt-10 space-y-5">
@@ -83,10 +83,10 @@ export default function HowItWorks() {
             <div className="section-shell py-20 text-center lg:py-24">
               <p className="eyebrow justify-center">How it works</p>
               <h1 className="mx-auto mt-3 max-w-4xl text-[42px] font-extrabold leading-[1.04] tracking-[-.055em] text-brand-900 lg:text-[54px]">
-                From Your Banking Problem <span className="block text-brand-500">To the Next Step.</span>
+                From Your Banking Problem <span className="block text-brand-500">To the Next Step</span>
               </h1>
               <p className="mx-auto mt-4 max-w-2xl text-sm text-slate-600">Watch our short walkthrough to understand how we help with your banking concern.</p>
-              <button type="button" onClick={() => setIsVideoOpen(true)} className="group relative mx-auto mt-9 block w-full max-w-[820px] overflow-hidden rounded-2xl bg-brand-900 text-left shadow-[0_18px_46px_rgba(8,41,79,.2)]" aria-label="Play the How Dispute Paisa works video">
+              <button type="button" onClick={() => setIsVideoOpen(true)} className="how-video group relative mx-auto mt-9 block w-full max-w-[820px] overflow-hidden rounded-2xl bg-brand-900 text-left shadow-[0_18px_46px_rgba(8,41,79,.2)]" aria-label="Play the How Dispute Paisa works video">
                 <img src={videoPoster} alt="Video preview of Dispute Paisa support" className="aspect-[16/9] w-full object-cover opacity-70 transition duration-300 group-hover:scale-[1.02]" />
                 <span className="absolute inset-0 grid place-items-center"><span className="grid h-16 w-16 place-items-center rounded-full bg-white text-brand-500 shadow-xl"><Play className="ml-1" size={28} fill="currentColor" /></span></span>
                 <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-900/90 to-transparent px-6 pb-5 pt-16 text-sm font-extrabold text-white">Watch how Dispute Paisa works</span>
@@ -94,7 +94,7 @@ export default function HowItWorks() {
             </div>
           </section>
 
-          <section className="section-shell py-14 lg:py-16">
+          <section className="how-process-section section-shell py-14 lg:py-16">
             <div className="how-process-panel mx-auto max-w-[1450px]">
               <div className="text-center"><p className="eyebrow justify-center"><span className="h-px w-6 bg-brand-500" />Simple process</p><h2 className="mt-2 text-[38px] font-black tracking-[-.05em] text-brand-900">What happens next</h2><p className="mt-2 text-[15px] font-medium text-slate-500">Follow these simple steps and get the support you need.</p></div>
               <div className="how-stepper mt-8" role="tablist" aria-label="Query process steps">
@@ -119,7 +119,7 @@ export default function HowItWorks() {
             </div>
           </section>
 
-          <section className="section-shell pb-16 lg:pb-20">
+          <section className="how-issues-section section-shell pb-16 pt-14 lg:pb-20 lg:pt-16">
             <div className="mx-auto max-w-[1450px]"><p className="eyebrow"><span className="h-px w-6 bg-brand-500" />Common banking issues</p><div className="mt-2 flex items-end justify-between"><div><h2 className="text-[30px] font-extrabold tracking-[-.04em] text-brand-900">Facing any of these banking problems?</h2><p className="mt-1 text-sm text-slate-500">Select a category to learn more or raise a query directly.</p></div><a href="/#services" className="text-sm font-bold text-brand-500">View all issues <ArrowRight className="ml-1 inline" size={16} /></a></div>
               <div className="mt-5 grid grid-cols-3 gap-3 lg:grid-cols-6">{issues.slice(0, 6).map(({ title, text, icon: Icon }) => <a href="/#query" key={title} className="how-issue-card"><div className="grid h-11 w-11 place-items-center rounded-full bg-brand-100 text-brand-500"><Icon size={21} /></div><h3>{title}</h3><p>{text}</p><ArrowRight size={16} /></a>)}</div>
             </div>
