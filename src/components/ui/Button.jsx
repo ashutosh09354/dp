@@ -10,6 +10,7 @@ export default function Button({
   variant = "primary",
   href,
   className = "",
+  style,
   type,
   disabled,
   onClick,
@@ -20,14 +21,14 @@ export default function Button({
   // so it works inside forms and doesn't just navigate like a link.
   if (type || onClick) {
     return (
-      <button type={type || "button"} className={classes} disabled={disabled} onClick={onClick}>
+      <button type={type || "button"} className={classes} style={style} disabled={disabled} onClick={onClick}>
         {children}
       </button>
     );
   }
 
   return (
-    <a href={href || "#query"} className={classes}>
+    <a href={href || "#query"} className={classes} style={style}>
       {children}
     </a>
   );

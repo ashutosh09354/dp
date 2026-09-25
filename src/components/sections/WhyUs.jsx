@@ -12,7 +12,7 @@ export default function WhyUs() {
     <section id="about" className="section-shell py-10 md:py-12 lg:py-14">
       <div className="text-center">
         <p className="eyebrow">Built around your needs</p>
-        <h2 className="section-title mt-2">Why choose DisputePaisa?</h2>
+        <h2 className="section-title mt-2">Why choose Dispute Paisa?</h2>
         <p className="section-copy mx-auto mt-3">
           Trusted by thousands of customers across India for banking dispute assistance.
         </p>

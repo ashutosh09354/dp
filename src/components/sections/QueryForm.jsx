@@ -168,10 +168,10 @@ export default function QueryForm({ selectedIssue }) {
               Raise your <span className="block text-brand-500">banking query</span>
             </h2>
             <div className="mt-5 h-1 w-24 rounded-full bg-gradient-to-r from-brand-500 to-brand-200" />
-            <p className="mt-6 max-w-[620px] text-[16px] leading-7 text-slate-600 lg:text-[17px]">
+            <p className="mt-6 hidden max-w-[620px] text-[16px] leading-7 text-slate-600 md:block lg:text-[17px]">
               Share the details of your banking concern. Our team will review your query and contact you regarding the next steps.
             </p>
-            <div className="mt-8 grid gap-3 sm:grid-cols-2 sm:gap-x-8">
+            <div className="mt-8 hidden gap-3 md:grid md:grid-cols-2 md:gap-x-8">
               {queryBenefits.map((benefit) => (
                 <div key={benefit} className="flex items-center gap-3 text-sm font-semibold text-brand-900">
                   <CheckCircle2 size={25} className="shrink-0 text-accent-500" /> {benefit}
