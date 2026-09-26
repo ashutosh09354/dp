@@ -1,15 +1,11 @@
 import { useEffect, useState } from "react";
 import { Plus, Star } from "lucide-react";
 
-const testimonialImage = "/assets/testimonial.png";
-const testimonialImage3 = "/assets/testimonial3.png";
-const testimonialImage2 = "/assets/testimonial2.png";
 import { faqs } from "../../data/constants";
 
 const testimonials = [
   {
     id: 1,
-    image: testimonialImage,
     quote:
       "My refund was stuck for weeks. DisputePaisa helped me track it and I got my money back!",
     name: "Priya S.",
@@ -17,7 +13,6 @@ const testimonials = [
   },
   {
     id: 2,
-    image: testimonialImage2,
     quote:
       "I was confused about how to raise my banking complaint. DisputePaisa made the entire process simple and easy to understand.",
     name: "Rahul M.",
@@ -25,7 +20,6 @@ const testimonials = [
   },
   {
     id: 3,
-    image: testimonialImage3,
     quote:
       "I could finally track my complaint without repeatedly contacting the bank. The process was clear and convenient.",
     name: "Sneha R.",
@@ -193,18 +187,6 @@ export default function SocialProof() {
 function TestimonialCard({ testimonial }) {
   return (
     <article className="testimonial-card">
-
-      {/* IMAGE */}
-      <div className="testimonial-image-wrapper">
-
-        <img
-          src={testimonial.image}
-          alt={`${testimonial.name} - DisputePaisa customer`}
-          className="testimonial-photo"
-        />
-
-      </div>
-
 
       {/* CONTENT */}
       <div className="testimonial-content">

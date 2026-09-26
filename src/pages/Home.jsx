@@ -17,22 +17,22 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-slate-50">
+    <div className="home-page">
       <Hero />
-      <div className="home-section home-section-white">
+      <div className="home-section home-section-surface">
         <ProblemExplorer onIssue={chooseIssue} />
       </div>
-      <div className="home-section home-section-muted">
+      <div className="home-section home-section-featured">
         <Services />
       </div>
       <QueryForm selectedIssue={selectedIssue} />
-      <div className="home-section home-section-white">
+      <div className="home-section home-section-surface">
         <Tracker />
       </div>
       <div className="home-section home-section-muted">
         <WhyUs />
       </div>
-      <div className="home-section home-section-white">
+      <div className="home-section home-section-surface">
         <SocialProof />
       </div>
       <FinalCTA />
