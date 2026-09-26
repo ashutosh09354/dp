@@ -42,7 +42,7 @@ body {
   /* A long fade keeps the hand at the artwork edge from competing with the
      headline, rather than leaving a hard-looking image boundary. */
   background-image: linear-gradient(90deg, #f9fdff 0%, rgba(249,253,255,.96) 28%, rgba(249,253,255,.66) 40%, rgba(249,253,255,.20) 51%, rgba(249,253,255,0) 60%), url('/assets/hero%20puzzle.png');
-  background-position: center, right -85px top -18px;
+  background-position: center, right -115px top -18px;
   background-size: cover, auto 102%;
   background-repeat: no-repeat;
 }
@@ -88,7 +88,7 @@ body {
 .reference-hero-trust-item strong { color: #092d66; font-size: 14px; font-weight: 800; }
 .reference-hero-trust-item small { margin-top: 3px; color: #56729e; font-size: 12px; }
 .mobile-reference-hero-content { display: none; }
-@media (max-width: 1100px) { .reference-hero { height: clamp(620px, calc(100svh - 72px), 690px); } .reference-hero-content { width: min(610px,57%); padding-bottom: 32px; transform: none; } .reference-hero-art { background-size: cover, auto 103%; background-position: center, 112% calc(50% - 18px); } .reference-hero-trust { grid-template-columns: 1fr; gap: 12px; margin-top: 42px; transform: none; } .reference-hero-trust-item, .reference-hero-trust-item:first-child { padding: 0; } .reference-hero-trust-item + .reference-hero-trust-item { border: 0; } }
+@media (max-width: 1100px) { .reference-hero { height: clamp(620px, calc(100svh - 72px), 690px); } .reference-hero-content { width: min(610px,57%); padding-bottom: 32px; transform: none; } .reference-hero-art { background-size: cover, auto 103%; background-position: center, 116% calc(50% - 18px); } .reference-hero-trust { grid-template-columns: 1fr; gap: 12px; margin-top: 42px; transform: none; } .reference-hero-trust-item, .reference-hero-trust-item:first-child { padding: 0; } .reference-hero-trust-item + .reference-hero-trust-item { border: 0; } }
 /* Tablet-only layout: retain a two-column hero while giving both the copy and
    artwork room to breathe. The compact navigation is enabled in Navbar.jsx. */
 @media (min-width: 768px) and (max-width: 1100px) {
@@ -97,7 +97,7 @@ body {
   .reference-hero-copy { max-width: 500px; font-size: 18px; }
   .reference-hero-actions { gap: 14px; margin-top: 28px; }
   .reference-hero-primary, .reference-hero-secondary { min-height: 60px; padding-inline: 22px !important; font-size: 15px !important; }
-  .reference-hero-art { background-size: cover, auto 97%; background-position: center, right -35px calc(50% - 18px); }
+  .reference-hero-art { background-size: cover, auto 97%; background-position: center, right -65px calc(50% - 18px); }
   .reference-hero-trust { grid-template-columns: repeat(3, max-content); gap: 0; margin-top: 34px; }
   .reference-hero-trust-item, .reference-hero-trust-item:first-child { padding: 0 14px; }
   .reference-hero-trust-item:first-child { padding-left: 0; }
