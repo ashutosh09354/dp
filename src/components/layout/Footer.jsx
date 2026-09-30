@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="section-shell py-12">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <Logo light />
+            <Logo to="/#home" />
             <p className="mt-4 max-w-xs text-sm leading-6 text-white/60">
               Banking dispute assistance with a simple, secure and transparent query journey.
             </p>

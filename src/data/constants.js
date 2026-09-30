@@ -61,7 +61,7 @@ export const navLinks = [
   ["How It Works", "/how-it-works"],
   ["About", "/about"],
   ["Track Query", "/#track"],
-  ["Contact", "/#contact"],
+  ["Contact", "/#query"],
 ];
 
 export const banks = ["SBI", "HDFC Bank", "ICICI Bank", "Axis Bank", "Kotak Mahindra", "Other"];

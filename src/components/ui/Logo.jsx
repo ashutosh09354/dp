@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 const logoImg = "/assets/logo.png";
 
-export default function Logo({ light = false, className = "" }) {
+export default function Logo({ light = false, className = "", to = "/" }) {
   return (
-    <Link to="/" className={`inline-flex items-center shrink-0 ${className}`}>
+    <Link to={to} className={`inline-flex items-center shrink-0 ${className}`}>
       <img
         src={logoImg}
         alt="Dispute Paisa Logo"

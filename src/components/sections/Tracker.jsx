@@ -4,7 +4,7 @@ const trackStatusPhone = "/assets/track-status-phone.png";
 
 // Same Web app URL used by QueryForm.jsx
 const GOOGLE_SHEET_WEB_APP_URL =
-  "https://script.google.com/macros/s/AKfycbxWFQjc0Dg2OSX-EUuIscQD2ii3cVSv9HbPDnBrzd_lUhYONcuwNvY-tlUN2NI9GbWm0A/exec";
+  "https://script.google.com/macros/s/AKfycbwU4UF_VzJHCnb5XsM5dwvf0HIJ8Efw-lLCuywOuDJdxzZZIjjX0PE5qEXkSWLi81bC5Q/exec";
 
 const STATUS_STEPS = ["Not started", "In progress", "Completed"];
 
@@ -30,11 +30,24 @@ export default function Tracker() {
     setResult(null);
 
     try {
-      const res = await fetch(`${GOOGLE_SHEET_WEB_APP_URL}?queryId=${encodeURIComponent(refId.trim())}`);
+      const queryId = refId.trim().toUpperCase();
+      // Merchant submissions use a DPM- reference ID. Send the source along
+      // with the ID so the Apps Script can search the merchant sheet instead
+      // of only the customer sheet.
+      const submitterType = queryId.startsWith("DPM-") ? "merchant" : "customer";
+      const params = new URLSearchParams({ queryId, submitterType });
+      const res = await fetch(`${GOOGLE_SHEET_WEB_APP_URL}?${params.toString()}`);
       const data = await res.json();
 
       if (data.found) {
-        setResult(data);
+        setResult({
+          ...data,
+          queryId: data.queryId || queryId,
+          // Supports either common response field while the tracking script
+          // is being updated for merchant records.
+          status: data.status || data.merchantStatus || "Not started",
+          submitterType: data.submitterType || data.source || submitterType,
+        });
       } else {
         setError(data.error || "No query found with that reference ID.");
       }
@@ -53,25 +66,25 @@ export default function Tracker() {
           <p className="section-copy mt-2">
             Enter your query reference number to check the latest status of your request.
           </p>
-         <form
-  onSubmit={handleTrack}
-  className="tracker-form mt-6 flex flex-col gap-2 sm:flex-row max-w-lg lg:max-w-xl"
->
-  <input
-    className="tracker-input h-12 min-w-0 flex-1 rounded-xl border border-slate-200 bg-white px-4 text-sm outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-100"
-    placeholder="Enter your reference number"
-    value={refId}
-    onChange={(e) => setRefId(e.target.value)}
-  />
+          <form
+            onSubmit={handleTrack}
+            className="tracker-form mt-6 flex flex-col gap-2 sm:flex-row max-w-lg lg:max-w-xl"
+          >
+            <input
+              className="tracker-input h-12 min-w-0 flex-1 rounded-xl border border-slate-200 bg-white px-4 text-sm outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-100"
+              placeholder="Enter your reference number"
+              value={refId}
+              onChange={(e) => setRefId(e.target.value)}
+            />
 
-  <Button
-    type="submit"
-    className="tracker-button shrink-0 px-6"
-    disabled={loading}
-  >
-    {loading ? "Checking..." : "Track Status"}
-  </Button>
-</form>
+            <Button
+              type="submit"
+              className="tracker-button shrink-0 px-6"
+              disabled={loading}  
+            >
+              {loading ? "Checking..." : "Track Status"}
+            </Button>
+          </form>
 
           {error && <p className="mt-3 text-sm font-semibold text-red-600">{error}</p>}
 
@@ -79,6 +92,8 @@ export default function Tracker() {
             <div className="mt-6 max-w-sm rounded-2xl border border-slate-200 bg-white p-5 shadow-soft">
               <div className="text-xs font-bold uppercase tracking-wider text-slate-500">Query Reference ID</div>
               <div className="mt-1 text-lg font-extrabold text-brand-900">{result.queryId}</div>
+              <div className="mt-3 text-xs font-bold uppercase tracking-wider text-slate-500">Query Type</div>
+              <div className="mt-1 text-sm font-extrabold capitalize text-brand-700">{result.submitterType}</div>
               <div className="mt-4 text-xs font-bold uppercase tracking-wider text-slate-500">Status</div>
               <div className="mt-1 text-sm font-extrabold text-brand-700">{result.status}</div>
               <div className="mt-3 h-2 overflow-hidden rounded-full bg-slate-100">
