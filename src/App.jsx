@@ -5,9 +5,8 @@ import Home from "./pages/Home";
 import HowItWorks from "./pages/HowItWorks";
 import About from "./pages/About";
 // import Login from "./pages/Login"; // Re-enable when authentication is available.
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsConditions from "./pages/TermsConditions";
-import Disclaimer from "./pages/Disclaimer";
+import PrivacyCenter from "./pages/PrivacyCenter/PrivacyCenter";
+import LegalPoliciesRoutes from "./pages/LegalPolicies/LegalPoliciesRoutes";
 import ScrollToTop from "./components/layout/ScrollToTop";
 import MobileBottomNav from "./components/layout/MobileBottomNav";
 
@@ -22,9 +21,8 @@ export default function App() {
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/about" element={<About />} />
           {/* <Route path="/login" element={<Login />} /> */}
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-conditions" element={<TermsConditions />} />
-          <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/privacy-center" element={<PrivacyCenter />} />
+          <Route path="/legal-policies/*" element={<LegalPoliciesRoutes />} />
         </Routes>
       </main>
       <Footer />

@@ -49,9 +49,7 @@ export default function Footer() {
           <div>
             <h3 className="footer-head">Legal & Contact</h3>
             <div className="footer-links">
-              <Link to="/privacy-policy">Privacy Policy</Link>
-              <Link to="/terms-conditions">Terms & Conditions</Link>
-              <Link to="/disclaimer">Disclaimer</Link>
+              <Link to="/privacy-center">Privacy Center</Link>
               <span className="mt-2">support@disputepaisa.com</span>
               <span>+91 XXXXX XXXXX</span>
               <span>Mon - Sat, 9AM - 6PM</span>
