@@ -6,7 +6,7 @@ const socialLinks = [
   [Linkedin, "#"],
   [Twitter, "#"],
   [Youtube, "#"],
-  [Instagram, "#"],
+  [Instagram, "https://www.instagram.com/disputepaisa/?hl=en"],
 ];
 
 export default function Footer() {
@@ -52,7 +52,11 @@ export default function Footer() {
               <Link to="/privacy-center">Privacy Center</Link>
               <span className="mt-2">support@disputepaisa.com</span>
               <span>+91 XXXXX XXXXX</span>
-              <span>Mon - Sat, 9AM - 6PM</span>
+              <address className="not-italic leading-6">
+                2nd Floor, Plot No - 3, KH. NO. 33/6 AMBERHAI,
+                <br />
+                SECTOR-19, DWARKA, NEW DELHI - 110043
+              </address>
             </div>
           </div>
         </div>

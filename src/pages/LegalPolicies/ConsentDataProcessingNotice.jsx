@@ -163,7 +163,7 @@ export default function ConsentDataProcessingNotice() {
       title="Consent & Data Processing Notice"
       introduction="Dispute Paisa respects the privacy of individuals and is committed to handling personal information responsibly. This notice explains what personal information we may collect, why we process it, how it may be used or shared, and how individuals can exercise their applicable rights."
       sections={sections}
-      lastUpdated="January 2026"
+      lastUpdated="06/10/2026"
     />
   );
 }

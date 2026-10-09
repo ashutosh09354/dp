@@ -5,7 +5,7 @@ export default function PaymentTermsConditions() {
     <LegalPolicyLayout
       title="Payment Terms & Conditions"
       introduction="These Payment Terms & Conditions explain the payment process for consultation, case registration and other services provided by DisputePaisa. By making a payment, customers agree to the applicable service details, fees and conditions communicated before payment."
-      lastUpdated="[Insert Date]"
+      lastUpdated="06/10/2026"
       sections={[
         {
           title: "1. Service Fees",

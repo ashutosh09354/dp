@@ -104,7 +104,7 @@ export default function CookiePolicy() {
       title="Cookie Policy"
       introduction="This Cookie Policy explains how Dispute Paisa uses cookies and similar technologies on its website and digital services."
       sections={sections}
-      lastUpdated="January 2026"
+      lastUpdated="06/10/2026"
     />
   );
 }

@@ -5,7 +5,7 @@ export default function UserAcceptanceConsentPolicy() {
     <LegalPolicyLayout
       title="User Acceptance and Consent Policy"
       introduction="This User Acceptance and Consent Policy explains how users acknowledge and accept the terms, policies, disclosures, and consent requests applicable to DisputePaisa's website, mobile application, and related services."
-      lastUpdated="[DD/MM/YYYY]"
+      lastUpdated="06/10/2026"
       sections={[
         {
           title: "1. Purpose",

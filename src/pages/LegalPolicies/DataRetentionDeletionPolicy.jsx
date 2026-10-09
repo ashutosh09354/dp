@@ -160,7 +160,7 @@ export default function DataRetentionDeletionPolicy() {
       title="Data Retention and Deletion Policy"
       introduction="This policy explains how Dispute Paisa collects, stores, retains, archives, and deletes information processed through its website, mobile application, admin dashboard, retailer panel, and other business systems."
       sections={sections}
-      lastUpdated="January 2026"
+      lastUpdated="06/10/2026"
     />
   );
 }

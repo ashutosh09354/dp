@@ -6,8 +6,8 @@ export default function AccountDeletionDataRightsProcedure() {
       title: "Document Details",
       paragraphs: [
         "Website: https://disputepaisa.com",
-        "Effective Date: [Insert Date]",
-        "Last Updated: [Insert Date]",
+        "Effective Date: 06/10/2026",
+        "Last Updated: 06/10/2026",
         "Legal Entity: [Insert Full Legal Entity Name]",
       ],
     },
@@ -211,7 +211,7 @@ export default function AccountDeletionDataRightsProcedure() {
       title="Account Deletion & Data Rights Procedure"
       introduction="This procedure explains how Dispute Paisa users may request account deletion, access or correction of personal information, withdrawal of consent where applicable, and other data-related actions available under applicable law."
       sections={sections}
-      lastUpdated="January 2026"
+      lastUpdated="06/10/2026"
     />
   );
 }

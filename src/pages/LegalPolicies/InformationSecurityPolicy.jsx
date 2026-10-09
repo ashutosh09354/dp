@@ -157,7 +157,7 @@ export default function InformationSecurityPolicy() {
       title="Information Security Policy"
       introduction="Dispute Paisa takes reasonable steps to protect information submitted through its website and query facilitation service."
       sections={sections}
-      lastUpdated="January 2026"
+      lastUpdated="06/10/2026"
     />
   );
 }

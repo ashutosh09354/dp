@@ -5,7 +5,7 @@ export default function RefundCancellationPolicy() {
     <LegalPolicyLayout
       title="Refund & Cancellation Policy"
       introduction="This Refund & Cancellation Policy explains the circumstances under which a customer may cancel a DisputePaisa service or request a refund for a payment made through the DisputePaisa website, mobile application, retailer/partner channel or other authorised payment channel."
-      lastUpdated="[DD/MM/YYYY]"
+      lastUpdated="06/10/2026"
       sections={[
         {
           title: "1. Purpose",
@@ -477,7 +477,7 @@ export default function RefundCancellationPolicy() {
           ],
           paragraphs2: [
             "The updated version will be published on the DisputePaisa website.",
-            "Last Updated: [DD/MM/YYYY]"
+            "Last Updated: 06/10/2026"
           ]
         },
         {

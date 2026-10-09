@@ -5,7 +5,7 @@ export default function ServiceDisclaimer() {
     <LegalPolicyLayout
       title="Service Disclaimer"
       introduction="This Service Disclaimer explains the nature, scope and limitations of the services provided by DisputePaisa. DisputePaisa provides information, consultation, case guidance and structured support relating to financial and banking disputes."
-      lastUpdated="[DD/MM/YYYY]"
+      lastUpdated="06/10/2026"
       sections={[
         {
           title: "1. Purpose of This Disclaimer",
@@ -483,7 +483,7 @@ export default function ServiceDisclaimer() {
           ],
           paragraphs2: [
             "The latest version will be published on the DisputePaisa website.",
-            "Last Updated: [DD/MM/YYYY]"
+            "Last Updated: 06/10/2026"
           ]
         },
         {

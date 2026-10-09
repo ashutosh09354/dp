@@ -100,7 +100,7 @@ export default function LegalServicesThirdPartyRepresentationDisclosure() {
       title="Legal Services & Third-Party Representation Disclosure"
       introduction="Dispute Paisa provides financial dispute-related guidance, case assistance, documentation support, case tracking, and related support services according to the services actually offered on the platform."
       sections={sections}
-      lastUpdated="January 2026"
+      lastUpdated="06/10/2026"
     />
   );
 }

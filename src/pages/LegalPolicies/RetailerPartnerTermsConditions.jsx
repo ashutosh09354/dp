@@ -5,7 +5,7 @@ export default function RetailerPartnerTermsConditions() {
     <LegalPolicyLayout
       title="Retailer & Partner Terms and Conditions"
       introduction="These Retailer & Partner Terms and Conditions govern the relationship between DisputePaisa and retailers, distributors, referral partners and other authorised business partners who help customers access DisputePaisa's services. By registering as a partner or using the partner platform, the partner agrees to comply with these terms, the applicable partner agreement and relevant DisputePaisa policies."
-      lastUpdated="[Insert Date]"
+      lastUpdated="06/10/2026"
       sections={[
         {
           title: "1. Introduction",

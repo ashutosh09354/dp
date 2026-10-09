@@ -5,7 +5,7 @@ export default function PrivacyPolicy() {
     <LegalPolicyLayout
       title="Privacy Policy"
       introduction="Welcome to DisputePaisa. DisputePaisa is a platform providing information, consultation, case guidance and structured support relating to financial and banking disputes. This Privacy Policy explains how [Legal Company Name], operating under the brand DisputePaisa, collects, uses, stores, processes, shares and protects personal information when you use our website, mobile application, services or communication channels."
-      lastUpdated="[DD/MM/YYYY]"
+      lastUpdated="06/10/2026"
       sections={[
         {
           title: "1. Introduction",

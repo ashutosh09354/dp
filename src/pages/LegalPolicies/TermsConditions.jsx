@@ -5,7 +5,7 @@ export default function LegalPoliciesTermsConditions() {
     <LegalPolicyLayout
       title="Terms & Conditions"
       introduction="These Terms & Conditions govern your access to and use of the DisputePaisa website, mobile application, case-management platform and related services."
-      lastUpdated="[DD/MM/YYYY]"
+      lastUpdated="06/10/2026"
       sections={[
         {
           title: "1. Introduction",

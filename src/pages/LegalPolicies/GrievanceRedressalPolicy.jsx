@@ -132,7 +132,7 @@ export default function GrievanceRedressalPolicy() {
       title="Grievance Redressal Policy"
       introduction="This policy explains how customers can raise complaints about Dispute Paisa's services, payments, case handling, communication or other service-related concerns."
       sections={sections}
-      lastUpdated="January 2026"
+      lastUpdated="06/10/2026"
     />
   );
 }

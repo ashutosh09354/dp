@@ -195,7 +195,7 @@ export default function CaseRegistrationServicePolicy() {
       title="Case Registration & Service Policy"
       introduction="This policy explains how customers can register a banking or financial dispute query with Dispute Paisa and how the service process works."
       sections={sections}
-      lastUpdated="January 2026"
+      lastUpdated="06/10/2026"
     />
   );
 }

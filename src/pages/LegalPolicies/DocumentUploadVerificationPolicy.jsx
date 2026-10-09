@@ -185,7 +185,7 @@ export default function DocumentUploadVerificationPolicy() {
       title="Document Upload & Verification Policy"
       introduction="This policy explains how customers can submit documents, how submitted documents may be reviewed, and how document information is handled during the service process."
       sections={sections}
-      lastUpdated="January 2026"
+      lastUpdated="06/10/2026"
     />
   );
 }

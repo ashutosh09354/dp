@@ -3,8 +3,7 @@ import { ArrowRight, CheckCircle2, FileText, Headphones, MessageCircle, Play, Se
 const videoPoster = "/assets/laptop-support.png";
 import { issues } from "../data/constants";
 
-// Replace this URL with the final Dispute Paisa walkthrough when it is available.
-const videoUrl = "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4";
+const videoUrl = "/assets/Howitworks.mp4";
 
 const steps = [
   ["01", "Describe Your Problem", "Tell us what happened with your bank account or transaction.", FileText],

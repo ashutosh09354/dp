@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 
-export default function LegalPolicyLayout({ title, introduction, sections, lastUpdated = "January 2026" }) {
+export default function LegalPolicyLayout({
+  title,
+  introduction,
+  sections,
+  effectiveDate = "06/10/2026",
+  lastUpdated = "06/10/2026",
+}) {
   return (
     <main className="min-h-screen bg-white">
       <section className="section-soft">
@@ -21,7 +27,7 @@ export default function LegalPolicyLayout({ title, introduction, sections, lastU
             {introduction}
           </p>
           <p className="mt-5 text-xs font-semibold uppercase tracking-widest text-slate-400">
-            Last Updated: {lastUpdated}
+            Effective Date: {effectiveDate} <span className="mx-2">|</span> Last Updated: {lastUpdated}
           </p>
         </div>
       </section>

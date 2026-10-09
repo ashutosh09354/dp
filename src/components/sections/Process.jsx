@@ -101,12 +101,13 @@ export default function Process() {
 
               <div className="relative aspect-video overflow-hidden rounded-2xl bg-slate-900">
 
-                <iframe
+                <video
                   className="absolute inset-0 h-full w-full"
-                  src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                  src="/assets/Howitworks.mp4"
                   title="How Dispute Paisa Works"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
+                  controls
+                  playsInline
+                  preload="metadata"
                 />
 
               </div>

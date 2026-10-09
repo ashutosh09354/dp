@@ -172,7 +172,7 @@ export default function CustomerCommunicationPolicy() {
       title="Customer Communication Policy"
       introduction="This policy establishes guidelines for communication between Dispute Paisa and its customers through phone calls, WhatsApp, email, website forms, mobile applications and other authorised communication channels."
       sections={sections}
-      lastUpdated="January 2026"
+      lastUpdated="06/10/2026"
     />
   );
 }
