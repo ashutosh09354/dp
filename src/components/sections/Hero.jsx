@@ -28,18 +28,18 @@ export default function Hero() {
         </div>
         <div className="mobile-reference-hero-content relative z-10 w-full py-9">
           <div className="eyebrow">Safe banking. Stronger you.</div>
-          <h1 className="mt-3 max-w-[11ch] text-[32px] font-extrabold leading-[1.1] tracking-[-0.035em] text-brand-900">
+          <h1 className="mt-3 max-w-[11ch] text-[31px] font-extrabold leading-[1.1] tracking-[-0.035em] text-brand-900">
             Having a problem with your bank?
           </h1>
           <p className="mt-4 max-w-[34ch] text-[15px] leading-6 text-slate-600">
             File your banking complaint, track the status, and get expert guidance to navigate your dispute with confidence.
           </p>
           <div className="mt-6 flex flex-col gap-2">
-            <Button href="#query" className="!h-14 !w-full !justify-center !gap-2 !rounded-2xl !px-4 !text-sm active:!scale-[0.98]">
+            <Button href="#query" className="!h-[52px] !w-full !justify-center !gap-2 !rounded-2xl !px-4 !text-[13px] active:!scale-[0.98]">
               Raise a Query <ArrowRight size={14} className="shrink-0" />
             </Button>
-            <Button variant="outline" href="/how-it-works" className="!h-11 !w-full !justify-center !gap-1.5 !rounded-xl !px-3 !py-2.5 !text-[13px] active:!scale-[0.98]">
-              <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-brand-500 text-white"><Play size={11} fill="white" /></span>
+            <Button variant="outline" href="/how-it-works" className="!h-10 !w-full !justify-center !gap-1.5 !rounded-xl !px-3 !py-2 !text-[12px] active:!scale-[0.98]">
+              <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-500 text-white"><Play size={10} fill="white" /></span>
               <span>How It Works</span>
             </Button>
           </div>

@@ -29,7 +29,7 @@ export default function DetailedProcess() {
                     {i + 1}
                   </span>
                   <div>
-                    <h3 className="font-bold text-brand-900">{title}</h3>
+                    <h3 className="text-[14px] font-bold text-brand-900">{title}</h3>
                     <p className="mt-1 text-sm leading-5 text-slate-600">{text}</p>
                   </div>
                 </div>

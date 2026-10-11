@@ -133,7 +133,7 @@ function PolicyCard({ category }) {
           <Icon size={29} strokeWidth={2.5} />
         </span>
         <div className="min-w-0">
-          <h2 className="text-base font-extrabold tracking-tight text-brand-900">{category.title}</h2>
+          <h2 className="text-[14px] font-extrabold tracking-tight text-brand-900">{category.title}</h2>
           <p className="mt-0.5 text-xs leading-5 text-slate-600">{category.description}</p>
         </div>
       </header>
@@ -167,7 +167,7 @@ export default function PrivacyCenter() {
             <span aria-current="page">Privacy Center</span>
           </nav>
           <div className="max-w-2xl">
-            <h1 className="text-4xl font-extrabold tracking-[-.05em] text-[#091b54] sm:text-5xl lg:text-[52px]">
+            <h1 className="text-[35px] font-extrabold tracking-[-.05em] text-[#091b54] sm:text-[47px] lg:text-[51px]">
               Privacy Center
             </h1>
             <p className="mt-3 max-w-xl text-sm leading-6 text-[#405d8d] sm:text-base sm:leading-6">

@@ -81,7 +81,7 @@ function QuerySuccess({ queryId, onRedirect }) {
         <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-accent-500 text-white">
           <Check size={30} />
         </div>
-        <h2 className="mt-5 text-3xl font-extrabold text-brand-900">Your Query Has Been Submitted Successfully</h2>
+        <h2 className="mt-5 text-[29px] font-extrabold text-brand-900">Your Query Has Been Submitted Successfully</h2>
         <p className="mt-3 text-slate-600">
           <strong>Reference ID</strong> has been generated.
         </p>
@@ -197,7 +197,7 @@ export default function QueryForm({ selectedIssue }) {
 
             <div className="mt-12 hidden sm:block">
               <div className="flex items-center gap-4">
-                <h3 className="text-3xl font-extrabold tracking-[-.04em] text-brand-900">How it works?</h3>
+                <h3 className="text-[29px] font-extrabold tracking-[-.04em] text-brand-900">How it works?</h3>
                 <span className="h-1 w-14 rounded-full bg-brand-500" />
               </div>
               <div className="mt-5 grid max-w-[590px] grid-cols-2 gap-2 lg:grid-cols-4">
@@ -226,7 +226,7 @@ export default function QueryForm({ selectedIssue }) {
           <form onSubmit={handleSubmit} className="query-form-card rounded-[26px] border border-white bg-white p-5 shadow-[0_18px_55px_rgba(8,41,79,.11)] sm:p-7 lg:p-8">
             <div className="mb-7 flex items-center gap-4">
               <div className="grid h-[68px] w-[68px] shrink-0 place-items-center rounded-2xl bg-brand-100 text-brand-500"><ClipboardList size={35} /></div>
-              <div><h3 className="text-2xl font-extrabold tracking-[-.04em] text-brand-900">Submit Your Query</h3><p className="mt-1 text-sm text-slate-600">Tell us about your banking issue and we'll take it from here.</p></div>
+              <div><h3 className="text-[23px] font-extrabold tracking-[-.04em] text-brand-900">Submit Your Query</h3><p className="mt-1 text-sm text-slate-600">Tell us about your banking issue and we'll take it from here.</p></div>
             </div>
 
             {/* Customer / Merchant toggle */}

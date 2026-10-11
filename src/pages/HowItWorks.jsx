@@ -33,7 +33,7 @@ export default function HowItWorks() {
           <section className="how-hero section-soft">
             <div className="section-shell py-16 text-center">
             <p className="eyebrow justify-center">How it works</p>
-            <h1 className="mx-auto mt-4 max-w-4xl text-4xl font-extrabold tracking-[-.05em] text-brand-900 md:text-6xl">
+            <h1 className="mx-auto mt-4 max-w-4xl text-[35px] font-extrabold tracking-[-.05em] text-brand-900 md:text-[59px]">
               From Your Banking Problem
               <span className="block text-brand-500">To the Next Step</span>
             </h1>
@@ -59,14 +59,14 @@ export default function HowItWorks() {
           </section>
           <section className="how-mobile-journey section-shell py-16">
             <div className="mx-auto max-w-4xl">
-            <h2 className="text-center text-3xl font-extrabold tracking-[-.03em] text-brand-900">What happens next</h2>
+            <h2 className="text-center text-[29px] font-extrabold tracking-[-.03em] text-brand-900">What happens next</h2>
             <div className="mt-10 space-y-5">
               {steps.map(([number, title, text, Icon]) => (
                 <div key={number} className="flex gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-card sm:gap-5 sm:p-6">
                   <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl border border-brand-200 bg-brand-100 text-brand-600 shadow-sm"><Icon size={21} strokeWidth={2.2} /></span>
                   <div>
                     <span className="text-xs font-extrabold tracking-widest text-brand-500">STEP {number}</span>
-                    <h3 className="mt-1 text-lg font-extrabold text-brand-900">{title}</h3>
+                    <h3 className="mt-1 text-[16px] font-extrabold text-brand-900">{title}</h3>
                     <p className="mt-1 text-sm leading-6 text-slate-600">{text}</p>
                   </div>
                 </div>
@@ -81,7 +81,7 @@ export default function HowItWorks() {
           <section className="how-hero section-soft">
             <div className="section-shell py-20 text-center lg:py-24">
               <p className="eyebrow justify-center">How it works</p>
-              <h1 className="mx-auto mt-3 max-w-4xl text-[42px] font-extrabold leading-[1.04] tracking-[-.055em] text-brand-900 lg:text-[54px]">
+              <h1 className="mx-auto mt-3 max-w-4xl text-[41px] font-extrabold leading-[1.04] tracking-[-.055em] text-brand-900 lg:text-[53px]">
                 From Your Banking Problem <span className="block text-brand-500">To the Next Step</span>
               </h1>
               <p className="mx-auto mt-4 max-w-2xl text-sm text-slate-600">Watch our short walkthrough to understand how we help with your banking concern.</p>
@@ -95,7 +95,7 @@ export default function HowItWorks() {
 
           <section className="how-process-section section-shell py-14 lg:py-16">
             <div className="how-process-panel mx-auto max-w-[1450px]">
-              <div className="text-center"><p className="eyebrow justify-center"><span className="h-px w-6 bg-brand-500" />Simple process</p><h2 className="mt-2 text-[38px] font-black tracking-[-.05em] text-brand-900">What happens next</h2><p className="mt-2 text-[15px] font-medium text-slate-500">Follow these simple steps and get the support you need.</p></div>
+              <div className="text-center"><p className="eyebrow justify-center"><span className="h-px w-6 bg-brand-500" />Simple process</p><h2 className="mt-2 text-[37px] font-black tracking-[-.05em] text-brand-900">What happens next</h2><p className="mt-2 text-[15px] font-medium text-slate-500">Follow these simple steps and get the support you need.</p></div>
               <div className="how-stepper mt-8" role="tablist" aria-label="Query process steps">
                 {steps.map(([number, title, , Icon], index) => (
                   <button type="button" key={number} onClick={() => setActiveStep(index)} className={index === activeStep ? "is-active" : index < activeStep ? "is-complete" : ""} role="tab" aria-selected={index === activeStep}>
@@ -112,14 +112,14 @@ export default function HowItWorks() {
                 ))}
               </div>
               <div className="mt-6 flex items-center justify-between gap-6 rounded-2xl border border-brand-100 bg-brand-50 px-8 py-5">
-                <div className="flex items-center gap-4"><Headphones size={48} className="text-brand-500" /><div><h3 className="text-lg font-extrabold text-brand-500">Need Help?</h3><p className="mt-1 text-sm text-slate-600">If you're not sure how to raise a query or which category fits your issue, our support team is here to help.</p></div></div>
+                <div className="flex items-center gap-4"><Headphones size={48} className="text-brand-500" /><div><h3 className="text-[16px] font-extrabold text-brand-500">Need Help?</h3><p className="mt-1 text-sm text-slate-600">If you're not sure how to raise a query or which category fits your issue, our support team is here to help.</p></div></div>
                 <a href="/#query" className="shrink-0 rounded-lg bg-brand-500 px-7 py-3 text-sm font-extrabold text-white shadow-md transition hover:bg-brand-600">Contact Support <ArrowRight className="ml-2 inline" size={16} /></a>
               </div>
             </div>
           </section>
 
           <section className="how-issues-section section-shell pb-16 pt-14 lg:pb-20 lg:pt-16">
-            <div className="mx-auto max-w-[1450px]"><p className="eyebrow"><span className="h-px w-6 bg-brand-500" />Common banking issues</p><div className="mt-2 flex items-end justify-between"><div><h2 className="text-[30px] font-extrabold tracking-[-.04em] text-brand-900">Facing any of these banking problems?</h2><p className="mt-1 text-sm text-slate-500">Select a category to learn more or raise a query directly.</p></div><a href="/#services" className="text-sm font-bold text-brand-500">View all issues <ArrowRight className="ml-1 inline" size={16} /></a></div>
+            <div className="mx-auto max-w-[1450px]"><p className="eyebrow"><span className="h-px w-6 bg-brand-500" />Common banking issues</p><div className="mt-2 flex items-end justify-between"><div><h2 className="text-[29px] font-extrabold tracking-[-.04em] text-brand-900">Facing any of these banking problems?</h2><p className="mt-1 text-sm text-slate-500">Select a category to learn more or raise a query directly.</p></div><a href="/#services" className="text-sm font-bold text-brand-500">View all issues <ArrowRight className="ml-1 inline" size={16} /></a></div>
               <div className="mt-5 grid grid-cols-3 gap-3 lg:grid-cols-6">{issues.slice(0, 6).map(({ title, text, icon: Icon }) => <a href="/#query" key={title} className="how-issue-card"><div className="grid h-11 w-11 place-items-center rounded-full bg-brand-100 text-brand-500"><Icon size={21} /></div><h3>{title}</h3><p>{text}</p><ArrowRight size={16} /></a>)}</div>
             </div>
           </section>

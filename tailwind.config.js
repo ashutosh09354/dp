@@ -6,6 +6,13 @@ export default {
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
       },
+      fontSize: {
+        xs: ["11px", "15px"],
+        sm: ["13px", "19px"],
+        base: ["15px", "23px"],
+        lg: ["17px", "27px"],
+        xl: ["19px", "27px"],
+      },
       colors: {
         brand: {
           50: "#eff8ff",

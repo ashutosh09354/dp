@@ -17,13 +17,13 @@ export default function Login() {
         <div className="mx-auto grid max-w-5xl overflow-hidden rounded-3xl bg-white shadow-[0_20px_55px_rgba(8,41,79,0.13)] md:grid-cols-[0.9fr_1.1fr]">
           <aside className="hidden bg-brand-900 p-10 text-white md:block lg:p-14">
             <p className="eyebrow text-brand-300">Welcome back</p>
-            <h1 className="mt-5 text-4xl font-extrabold tracking-[-.045em]">Track your banking concern with confidence.</h1>
+            <h1 className="mt-5 text-[35px] font-extrabold tracking-[-.045em]">Track your banking concern with confidence.</h1>
             <p className="mt-5 max-w-sm text-sm leading-6 text-white/70">Sign in to view your submitted queries and stay updated on their progress.</p>
           </aside>
 
           <section className="p-6 sm:p-10 lg:p-14">
             <p className="eyebrow">Account login</p>
-            <h1 className="mt-3 text-3xl font-extrabold tracking-[-.04em] text-brand-900">Sign in to your account</h1>
+            <h1 className="mt-3 text-[29px] font-extrabold tracking-[-.04em] text-brand-900">Sign in to your account</h1>
             <p className="mt-3 text-sm leading-6 text-slate-600">Use the email address and password associated with your account.</p>
 
             <form className="mt-8 space-y-5" onSubmit={handleSubmit}>

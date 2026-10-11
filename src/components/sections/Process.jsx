@@ -77,7 +77,7 @@ export default function Process() {
                         STEP {String(i + 1).padStart(2, "0")}
                       </span>
 
-                      <h3 className="mt-1 text-sm font-extrabold text-brand-900">
+                      <h3 className="mt-1 text-[12px] font-extrabold text-brand-900">
                         {title}
                       </h3>
 
@@ -118,7 +118,7 @@ export default function Process() {
             <div className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
 
               <div>
-                <h3 className="text-sm font-extrabold text-brand-900">
+                <h3 className="text-[12px] font-extrabold text-brand-900">
                   See how Dispute Paisa works
                 </h3>
 

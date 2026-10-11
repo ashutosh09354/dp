@@ -20,7 +20,7 @@ export default function LegalPolicyLayout({
             <span aria-current="page" className="text-slate-600">{title}</span>
           </nav>
           <p className="eyebrow">LEGAL POLICIES</p>
-          <h1 className="mt-3 max-w-4xl text-3xl font-extrabold tracking-[-.05em] text-brand-900 sm:text-4xl lg:text-5xl">
+          <h1 className="mt-3 max-w-4xl text-[29px] font-extrabold tracking-[-.05em] text-brand-900 sm:text-[35px] lg:text-[47px]">
             {title}
           </h1>
           <p className="mt-5 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
@@ -36,7 +36,7 @@ export default function LegalPolicyLayout({
         <div className="mx-auto max-w-4xl space-y-5">
           {sections.map((section, index) => (
             <article key={`${section.title}-${index}`} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-card sm:p-8">
-              <h2 className="text-lg font-extrabold text-brand-900 sm:text-xl">{section.title}</h2>
+              <h2 className="text-[16px] font-extrabold text-brand-900 sm:text-[18px]">{section.title}</h2>
               {section.paragraphs?.map((paragraph) => (
                 <p key={paragraph} className="mt-3 text-sm leading-7 text-slate-600">{paragraph}</p>
               ))}

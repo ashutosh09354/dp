@@ -47,7 +47,7 @@ export default function About() {
           <div className="mx-auto grid max-w-[1350px] items-center gap-10 lg:grid-cols-[.95fr_1.05fr]">
             <div>
               <p className="eyebrow">About Dispute Paisa</p>
-              <h1 className="mt-3 max-w-[630px] text-[40px] font-extrabold leading-[1.08] tracking-[-.055em] text-brand-900 md:text-[52px]">
+              <h1 className="mt-3 max-w-[630px] text-[39px] font-extrabold leading-[1.08] tracking-[-.055em] text-brand-900 md:text-[51px]">
                 Banking support{" "}
                 <span className="text-brand-500">made simple</span>
               </h1>
@@ -109,7 +109,7 @@ export default function About() {
           />
           <div>
             <p className="eyebrow">Our purpose</p>
-            <h2 className="mt-3 max-w-xl text-[36px] font-extrabold leading-[1.1] tracking-[-.045em] text-brand-900">
+            <h2 className="mt-3 max-w-xl text-[35px] font-extrabold leading-[1.1] tracking-[-.045em] text-brand-900">
               A fairer way to navigate{" "}
               <span className="text-brand-500">banking concerns.</span>
             </h2>
@@ -150,7 +150,7 @@ export default function About() {
         <div className="mx-auto max-w-[1350px]">
           <div className="max-w-2xl">
             <p className="eyebrow">Why choose us</p>
-            <h2 className="mt-3 text-[35px] font-extrabold tracking-[-.045em] text-brand-900">
+            <h2 className="mt-3 text-[34px] font-extrabold tracking-[-.045em] text-brand-900">
               Support that stays{" "}
               <span className="text-brand-500">clear and human.</span>
             </h2>
@@ -177,7 +177,7 @@ export default function About() {
         <div className="mx-auto grid max-w-[1350px] gap-10 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
           <div>
             <p className="eyebrow">How we help</p>
-            <h2 className="mt-3 text-[38px] font-extrabold leading-[1.1] tracking-[-.05em] text-brand-900">
+            <h2 className="mt-3 text-[37px] font-extrabold leading-[1.1] tracking-[-.05em] text-brand-900">
               Supporting you{" "}
               <span className="text-brand-500">every step of the way.</span>
             </h2>
