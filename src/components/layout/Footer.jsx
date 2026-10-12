@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Instagram, Linkedin, Facebook,} from "lucide-react";
 import Logo from "../ui/Logo";
 
 const socialLinks = [
-  [Linkedin, "#"],
-  [Twitter, "#"],
-  [Youtube, "#"],
+  [Linkedin, "https://www.linkedin.com/company/disputepaisa/home/?viewAsMember=true"],
+  [Facebook, "https://www.facebook.com/profile.php?id=61594152557294"],
+
   [Instagram, "https://www.instagram.com/disputepaisa/?hl=en"],
 ];
 
