@@ -10,18 +10,18 @@ export default function PrivacyPolicy() {
         {
           title: "1. Introduction",
           paragraphs: [
-            "This Privacy Policy applies when you:",
-            "visit our website;",
-            "submit an enquiry;",
-            "contact us by phone, WhatsApp, email or social media;",
-            "create an account;",
-            "use our mobile application;",
-            "register a case;",
-            "upload documents;",
-            "make a payment;",
-            "communicate with our employees, experts or support team;",
-            "use our case-tracking facilities; or",
-            "otherwise use our services."
+            "This Privacy Policy applies when you use DisputePaisa, including when you:"
+          ],
+          items: [
+            "Visit our website",
+            "Submit an enquiry",
+            "Contact us by phone, WhatsApp, email or social media",
+            "Create an account or use our mobile application",
+            "Register a case or upload documents",
+            "Make a payment",
+            "Communicate with our employees, experts or support team",
+            "Use our case-tracking facilities",
+            "Otherwise use our services"
           ]
         },
         {
@@ -30,12 +30,12 @@ export default function PrivacyPolicy() {
             "For the purposes of applicable data-protection law, the organisation responsible for processing your personal data is:"
           ],
           items: [
-            "Legal Entity: [Legal Company Name]",
+            "Legal Entity: Abheepay",
             "Brand: DisputePaisa",
-            "Registered Office: [Full Address]",
+            "Registered Office: 2nd Floor, Plot No - 3, KH. NO. 33/6 AMBERHAI, SECTOR-19, DWARKA, NEW DELHI - 110043",
             "Website: https://disputepaisa.com",
-            "Email: [privacy@disputepaisa.com]",
-            "Phone: [Phone Number]"
+            "Email: support@disputepaisa.com",
+            "Phone: NA"
           ],
           paragraphs2: [
             "Where required, we will identify the relevant privacy or grievance contact through our website or application."
@@ -545,13 +545,22 @@ export default function PrivacyPolicy() {
         {
           title: "16. Marketing Communications",
           paragraphs: [
-            "Where permitted and applicable, we may communicate information about DisputePaisa services, educational content or updates. You may have options to opt out of promotional communications. Service-related communications, such as case updates, payment notifications, security alerts and important account information, may continue where necessary to provide the service."
+            "Where permitted and applicable, we may send communications relating to DisputePaisa."
+          ],
+          items: [
+            "Promotional communications may include information about our services, educational content or updates. You may have options to opt out.",
+            "Service-related communications may include case updates, payment notifications, security alerts and important account information. These may continue where necessary to provide the service."
           ]
         },
         {
           title: "17. Children’s Privacy",
           paragraphs: [
-            "DisputePaisa services are intended for individuals who are legally capable of using the relevant services. We do not knowingly collect children’s personal data in violation of applicable law. If you believe that personal information of a child has been submitted to us improperly, please contact us."
+            "Our approach to children's personal data is as follows:"
+          ],
+          items: [
+            "DisputePaisa services are intended for individuals who are legally capable of using the relevant services.",
+            "We do not knowingly collect children's personal data in violation of applicable law.",
+            "If you believe that a child's personal information has been submitted to us improperly, please contact us."
           ]
         },
         {
@@ -593,7 +602,11 @@ export default function PrivacyPolicy() {
         {
           title: "20. International Data Processing",
           paragraphs: [
-            "Some technology or service providers used by DisputePaisa may process information from locations outside India. Where personal data is processed outside India, we will take steps required under applicable Indian law and contractual arrangements. Any applicable restrictions relating to transfer of personal data outside India will be followed."
+            "Some technology or service providers used by DisputePaisa may process information from locations outside India."
+          ],
+          items: [
+            "Where personal data is processed outside India, we will take steps required under applicable Indian law and contractual arrangements.",
+            "We will follow any applicable restrictions relating to the transfer of personal data outside India."
           ]
         },
         {
@@ -618,7 +631,10 @@ export default function PrivacyPolicy() {
         {
           title: "21.1 Grievance Officer",
           paragraphs: [
-            "Grievance Officer: [Name]",
+            "Grievance Officer contact details:"
+          ],
+          items: [
+            "Name: [Name]",
             "Designation: [Designation]",
             "Email: [grievance@disputepaisa.com]",
             "Phone: [Phone Number]",
@@ -671,12 +687,12 @@ export default function PrivacyPolicy() {
           ],
           items: [
             "DisputePaisa",
-            "A brand of: [Legal Company Name]",
+            "A brand of: Abheepay",
             "Website: https://disputepaisa.com",
-            "Email: [privacy@disputepaisa.com]",
-            "Grievance: [grievance@disputepaisa.com]",
-            "Phone: [Phone Number]",
-            "Registered Office: [Full Address]"
+            "Email: support@disputepaisa.com",
+            
+            "Phone: NA",
+            "Registered Office: 2nd Floor, Plot No - 3, KH. NO. 33/6 AMBERHAI, SECTOR-19, DWARKA, NEW DELHI - 110043"
           ]
         },
         {

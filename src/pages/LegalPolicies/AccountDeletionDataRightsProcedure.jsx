@@ -5,10 +5,15 @@ export default function AccountDeletionDataRightsProcedure() {
     {
       title: "Document Details",
       paragraphs: [
-        "Website: https://disputepaisa.com",
+        
         "Effective Date: 06/10/2026",
         "Last Updated: 06/10/2026",
-        "Legal Entity: [Insert Full Legal Entity Name]",
+        "Legal Entity: Abheepay",
+        "Brand: DisputePaisa",
+        "Registered Office: 2nd Floor, Plot No - 3, KH. NO. 33/6 AMBERHAI, SECTOR-19, DWARKA, NEW DELHI - 110043",
+        "Website: https://disputepaisa.com",
+        "Email: support@disputepaisa.com",
+        "Phone: NA",
       ],
     },
     {

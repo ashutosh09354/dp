@@ -89,12 +89,14 @@ export default function CookiePolicy() {
     {
       title: "11. Contact Us",
       paragraphs: [
-        "Brand: Dispute Paisa",
+        "Legal Entity: Abheepay",
+        "Brand: DisputePaisa",
+        "Registered Office: 2nd Floor, Plot No - 3, KH. NO. 33/6 AMBERHAI, SECTOR-19, DWARKA, NEW DELHI - 110043",
         "Website: https://disputepaisa.com",
-        "Legal Entity: [Insert Full Legal Entity Name]",
-        "Email: [Insert Official Contact Email]",
-        "Address: [Insert Registered Office Address]",
-        "By continuing to use our website, users should be provided with clear information about cookies and any consent choices required by applicable law. Continued browsing alone will not be treated as consent where an affirmative choice is legally required.",
+        "Email: support@disputepaisa.com",
+        "Phone: NA",
+     
+       
       ],
     },
   ];

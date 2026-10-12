@@ -116,9 +116,9 @@ export default function QueryForm({ selectedIssue }) {
   const [issue, setIssue] = useState(selectedIssue || "");
   const [fileName, setFileName] = useState("");
   const [description, setDescription] = useState("");
-  const [submitterType, setSubmitterType] = useState("customer"); // "customer" | "merchant"
+  const [submitterType, setSubmitterType] = useState("customer"); // "customer" | "partner"
   const [finalQueryId, setFinalQueryId] = useState("");
-  const isMerchant = submitterType === "merchant";
+  const isPartner = submitterType === "partner";
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -130,11 +130,20 @@ export default function QueryForm({ selectedIssue }) {
       const formData = new FormData(formEl);
 
       // Prefix distinguishes which sheet this ID belongs to (DP- for
-      // customers, DPM- for merchants).
-      const prefix = isMerchant ? "DPM" : "DP";
+      // customers, DPM- for partner/merchant records). Keep the legacy
+      // submitter type name in the payload to stay compatible with the
+      // current Apps Script backend while the UI still says "Partner".
+      const prefix = isPartner ? "DPM" : "DP";
+      const normalizedSubmitterType = isPartner ? "merchant" : "customer";
       const newQueryId = `${prefix}-${new Date().getFullYear()}-${Math.floor(100000 + Math.random() * 899999)}`;
       formData.append("queryId", newQueryId);
-      formData.append("submitterType", submitterType);
+      formData.append("submitterType", normalizedSubmitterType);
+      formData.append("source", normalizedSubmitterType);
+      if (isPartner) {
+        const partnerId = formData.get("merchantId") || formData.get("partnerId") || "";
+        formData.append("merchantId", partnerId);
+        formData.append("partnerId", partnerId);
+      }
 
       // Read the file from FormData (more reliable than formEl.document),
       // then remove the raw File since Apps Script can't read it directly.
@@ -229,49 +238,49 @@ export default function QueryForm({ selectedIssue }) {
               <div><h3 className="text-[23px] font-extrabold tracking-[-.04em] text-brand-900">Submit Your Query</h3><p className="mt-1 text-sm text-slate-600">Tell us about your banking issue and we'll take it from here.</p></div>
             </div>
 
-            {/* Customer / Merchant toggle */}
+            {/* Customer / Partner toggle */}
             <div className="mb-6 grid grid-cols-2 gap-2 rounded-xl bg-slate-100 p-1.5">
               <button
                 type="button"
                 onClick={() => setSubmitterType("customer")}
                 className={`flex items-center justify-center gap-2 rounded-lg py-2.5 text-sm font-extrabold transition ${
-                  !isMerchant ? "bg-white text-brand-700 shadow-[0_4px_12px_rgba(8,41,79,.08)]" : "text-slate-500 hover:text-slate-700"
+                  !isPartner ? "bg-white text-brand-700 shadow-[0_4px_12px_rgba(8,41,79,.08)]" : "text-slate-500 hover:text-slate-700"
                 }`}
               >
                 <UserRound size={16} /> I'm a Customer
               </button>
               <button
                 type="button"
-                onClick={() => setSubmitterType("merchant")}
+                onClick={() => setSubmitterType("partner")}
                 className={`flex items-center justify-center gap-2 rounded-lg py-2.5 text-sm font-extrabold transition ${
-                  isMerchant ? "bg-white text-brand-700 shadow-[0_4px_12px_rgba(8,41,79,.08)]" : "text-slate-500 hover:text-slate-700"
+                  isPartner ? "bg-white text-brand-700 shadow-[0_4px_12px_rgba(8,41,79,.08)]" : "text-slate-500 hover:text-slate-700"
                 }`}
               >
-                <Store size={16} /> I'm a Merchant
+                <Store size={16} /> I'm a Partner
               </button>
             </div>
-            {isMerchant && (
+            {isPartner && (
               <p className="-mt-3 mb-6 text-xs font-medium text-slate-500">
-                Filling this in on behalf of a customer who's unable to submit it themselves? Add your Merchant ID below so we can verify the submission.
+                Filling this in on behalf of a customer who's unable to submit it themselves? Add your Partner ID below so we can verify the submission.
               </p>
             )}
 
             {/* NOTE: every field below now has an explicit `key`. Without
-                stable keys, inserting/removing the Merchant ID field at the
-                front of this list (when toggling Customer/Merchant) could
+                stable keys, inserting/removing the Partner ID field at the
+                front of this list (when toggling Customer/Partner) could
                 cause React to remount the Upload Documents input further
                 down the list — silently clearing any file the user had
                 already selected, even though the filename text still showed
                 correctly. Keys fix that by giving React a stable identity
                 for each field regardless of how many items precede it. */}
             <div className="grid gap-x-4 gap-y-5 sm:grid-cols-2">
-              {isMerchant && (
+              {isPartner && (
                 <IconField
-                  key="merchantId"
-                  label="Merchant ID"
+                  key="partnerId"
+                  label="Partner ID"
                   Icon={Store}
                   name="merchantId"
-                  placeholder="Enter your merchant ID"
+                  placeholder="Enter your partner ID"
                   className="sm:col-span-2"
                   required
                 />

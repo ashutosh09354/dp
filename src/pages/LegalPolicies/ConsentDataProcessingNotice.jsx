@@ -146,14 +146,13 @@ export default function ConsentDataProcessingNotice() {
       title: "15. Contact Information",
       paragraphs: [
         "For questions, consent withdrawal requests or personal data-related concerns, please contact:",
-        "Dispute Paisa",
         "Website: https://disputepaisa.com",
-        "Legal Entity: [Insert Full Legal Entity Name]",
-        "Privacy Contact: [Insert Name/Designation]",
-        "Email: [Insert Privacy Support Email]",
-        "Phone/WhatsApp: [Insert Official Contact Number]",
-        "Registered Office: [Insert Full Address]",
-        "Dispute Paisa — Your Money. Your Rights.",
+        "Legal Entity: Abheepay",
+        "Brand: DisputePaisa",
+        "Email: support@disputepaisa.com",
+        "Phone/WhatsApp: NA",
+        "Registered Office: 2nd Floor, Plot No - 3, KH. NO. 33/6 AMBERHAI, SECTOR-19, DWARKA, NEW DELHI - 110043",
+       
       ],
     },
   ];

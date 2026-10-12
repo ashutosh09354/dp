@@ -31,11 +31,12 @@ export default function Tracker() {
 
     try {
       const queryId = refId.trim().toUpperCase();
-      // Merchant submissions use a DPM- reference ID. Send the source along
-      // with the ID so the Apps Script can search the merchant sheet instead
-      // of only the customer sheet.
+      // Partner submissions use a DPM- reference ID. Keep the legacy
+      // merchant value in the tracking request so the current Apps Script
+      // backend can still identify the correct sheet while the UI reads as
+      // "partner".
       const submitterType = queryId.startsWith("DPM-") ? "merchant" : "customer";
-      const params = new URLSearchParams({ queryId, submitterType });
+      const params = new URLSearchParams({ queryId, submitterType, source: submitterType });
       const res = await fetch(`${GOOGLE_SHEET_WEB_APP_URL}?${params.toString()}`);
       const data = await res.json();
 
@@ -44,8 +45,8 @@ export default function Tracker() {
           ...data,
           queryId: data.queryId || queryId,
           // Supports either common response field while the tracking script
-          // is being updated for merchant records.
-          status: data.status || data.merchantStatus || "Not started",
+          // is being updated for partner records.
+          status: data.status || data.partnerStatus || "Not started",
           submitterType: data.submitterType || data.source || submitterType,
         });
       } else {
@@ -93,7 +94,7 @@ export default function Tracker() {
               <div className="text-xs font-bold uppercase tracking-wider text-slate-500">Query Reference ID</div>
               <div className="mt-1 text-lg font-extrabold text-brand-900">{result.queryId}</div>
               <div className="mt-3 text-xs font-bold uppercase tracking-wider text-slate-500">Query Type</div>
-              <div className="mt-1 text-sm font-extrabold capitalize text-brand-700">{result.submitterType}</div>
+              <div className="mt-1 text-sm font-extrabold capitalize text-brand-700">{result.submitterType === "merchant" ? "partner" : result.submitterType}</div>
               <div className="mt-4 text-xs font-bold uppercase tracking-wider text-slate-500">Status</div>
               <div className="mt-1 text-sm font-extrabold text-brand-700">{result.status}</div>
               <div className="mt-3 h-2 overflow-hidden rounded-full bg-slate-100">

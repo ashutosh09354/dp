@@ -155,7 +155,7 @@ export default function SocialProof() {
 
         <div className="faq-column">
 
-          <h2 className="section-title tracking-[.01em]">
+          <h2 className="section-title faq-heading tracking-[.01em]">
             Frequently asked questions
           </h2>
 

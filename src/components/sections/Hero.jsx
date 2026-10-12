@@ -28,7 +28,7 @@ export default function Hero() {
         </div>
         <div className="mobile-reference-hero-content relative z-10 w-full py-9">
           <div className="eyebrow">Safe banking. Stronger you.</div>
-          <h1 className="mt-3 max-w-[11ch] text-[31px] font-extrabold leading-[1.1] tracking-[-0.035em] text-brand-900">
+          <h1 className="mt-3 max-w-[11ch] text-[37.6px] font-extrabold leading-[1.1] tracking-[-0.035em] text-brand-900">
             Having a problem with your bank?
           </h1>
           <p className="mt-4 max-w-[34ch] text-[15px] leading-6 text-slate-600">

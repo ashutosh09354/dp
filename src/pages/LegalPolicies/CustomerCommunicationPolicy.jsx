@@ -158,10 +158,13 @@ export default function CustomerCommunicationPolicy() {
       paragraphs: [
         "Dispute Paisa",
         "Website: https://disputepaisa.com",
-        "Legal Entity: [Insert Full Legal Entity Name]",
-        "Registered Office: [Insert Full Address]",
-        "Email: [Insert Official Support Email]",
-        "Phone/WhatsApp: [Insert Official Contact Number]",
+        "Legal Entity: Abheepay",
+            "Brand: DisputePaisa",
+            "Registered Office: 2nd Floor, Plot No - 3, KH. NO. 33/6 AMBERHAI, SECTOR-19, DWARKA, NEW DELHI - 110043",
+          
+            "Email: support@disputepaisa.com",
+            "Phone: NA",
+        
         "Dispute Paisa — Your Money. Your Rights.",
       ],
     },

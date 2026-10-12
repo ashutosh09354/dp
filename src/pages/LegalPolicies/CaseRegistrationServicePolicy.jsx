@@ -163,8 +163,8 @@ export default function CaseRegistrationServicePolicy() {
       title: "17. Grievances and Support",
       paragraphs: [
         "For concerns about registration, case handling, communication or service delivery, customers may contact:",
-        "Email: [Insert Official Support Email]",
-        "Phone/WhatsApp: [Insert Official Contact Number]",
+        "Email: support@disputepaisa.com",
+        "Phone: NA",
         "Grievance Officer: [Insert Name and Designation]",
         "Grievance Email: [Insert Grievance Email]",
         "Grievances will be handled under the Dispute Paisa Grievance Redressal Policy.",
@@ -181,11 +181,12 @@ export default function CaseRegistrationServicePolicy() {
       title: "19. Contact Information",
       paragraphs: [
         "Website: https://disputepaisa.com",
-        "Legal Entity: [Insert Full Legal Entity Name]",
-        "Registered Office: [Insert Full Address]",
-        "Email: [Insert Official Support Email]",
-        "Phone/WhatsApp: [Insert Official Contact Number]",
-        "Dispute Paisa — Your Money. Your Rights.",
+        "Legal Entity: Abheepay",
+        "Brand: DisputePaisa",
+        "Registered Office: 2nd Floor, Plot No - 3, KH. NO. 33/6 AMBERHAI, SECTOR-19, DWARKA, NEW DELHI - 110043",
+        "Email: support@disputepaisa.com",
+        "Phone: NA",
+     
       ],
     },
   ];

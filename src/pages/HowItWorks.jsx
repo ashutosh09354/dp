@@ -33,7 +33,7 @@ export default function HowItWorks() {
           <section className="how-hero section-soft">
             <div className="section-shell py-16 text-center">
             <p className="eyebrow justify-center">How it works</p>
-            <h1 className="mx-auto mt-4 max-w-4xl text-[35px] font-extrabold tracking-[-.05em] text-brand-900 md:text-[59px]">
+            <h1 className="mx-auto mt-4 max-w-4xl text-[22.75px] font-extrabold tracking-[-.05em] text-brand-900 md:text-[38.35px]">
               From Your Banking Problem
               <span className="block text-brand-500">To the Next Step</span>
             </h1>
@@ -81,7 +81,7 @@ export default function HowItWorks() {
           <section className="how-hero section-soft">
             <div className="section-shell py-20 text-center lg:py-24">
               <p className="eyebrow justify-center">How it works</p>
-              <h1 className="mx-auto mt-3 max-w-4xl text-[41px] font-extrabold leading-[1.04] tracking-[-.055em] text-brand-900 lg:text-[53px]">
+              <h1 className="mx-auto mt-3 max-w-4xl text-[26.65px] font-extrabold leading-[1.04] tracking-[-.055em] text-brand-900 lg:text-[34.45px]">
                 From Your Banking Problem <span className="block text-brand-500">To the Next Step</span>
               </h1>
               <p className="mx-auto mt-4 max-w-2xl text-sm text-slate-600">Watch our short walkthrough to understand how we help with your banking concern.</p>
