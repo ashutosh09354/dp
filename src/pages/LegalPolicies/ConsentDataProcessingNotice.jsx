@@ -147,7 +147,7 @@ export default function ConsentDataProcessingNotice() {
       paragraphs: [
         "For questions, consent withdrawal requests or personal data-related concerns, please contact:",
         "Website: https://disputepaisa.com",
-        "Legal Entity: Abheepay",
+        "Legal Entity: TELERING PROCESS PRIVATE LIMITED",
         "Brand: DisputePaisa",
         "Email: support@disputepaisa.com",
         "Phone/WhatsApp: NA",

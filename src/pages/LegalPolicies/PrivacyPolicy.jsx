@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
             "For the purposes of applicable data-protection law, the organisation responsible for processing your personal data is:"
           ],
           items: [
-            "Legal Entity: Abheepay",
+            "Legal Entity: TELERING PROCESS PRIVATE LIMITED",
             "Brand: DisputePaisa",
             "Registered Office: 2nd Floor, Plot No - 3, KH. NO. 33/6 AMBERHAI, SECTOR-19, DWARKA, NEW DELHI - 110043",
             "Website: https://disputepaisa.com",
@@ -687,7 +687,7 @@ export default function PrivacyPolicy() {
           ],
           items: [
             "DisputePaisa",
-            "A brand of: Abheepay",
+            "A brand of: TELERING PROCESS PRIVATE LIMITED",
             "Website: https://disputepaisa.com",
             "Email: support@disputepaisa.com",
             

@@ -8,7 +8,7 @@ export default function AccountDeletionDataRightsProcedure() {
         
         "Effective Date: 06/10/2026",
         "Last Updated: 06/10/2026",
-        "Legal Entity: Abheepay",
+        "Legal Entity: TELERING PROCESS PRIVATE LIMITED",
         "Brand: DisputePaisa",
         "Registered Office: 2nd Floor, Plot No - 3, KH. NO. 33/6 AMBERHAI, SECTOR-19, DWARKA, NEW DELHI - 110043",
         "Website: https://disputepaisa.com",

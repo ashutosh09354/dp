@@ -6,7 +6,7 @@ function formatPolicyText(text) {
     const normalizedField = field.toLowerCase();
 
     if (normalizedField.includes("legal") || normalizedField.includes("company")) {
-      return "Abheepay";
+      return "TELERING PROCESS PRIVATE LIMITED";
     }
     return "NA";
   });

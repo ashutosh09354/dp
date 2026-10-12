@@ -181,7 +181,7 @@ export default function CaseRegistrationServicePolicy() {
       title: "19. Contact Information",
       paragraphs: [
         "Website: https://disputepaisa.com",
-        "Legal Entity: Abheepay",
+        "Legal Entity: TELERING PROCESS PRIVATE LIMITED",
         "Brand: DisputePaisa",
         "Registered Office: 2nd Floor, Plot No - 3, KH. NO. 33/6 AMBERHAI, SECTOR-19, DWARKA, NEW DELHI - 110043",
         "Email: support@disputepaisa.com",
