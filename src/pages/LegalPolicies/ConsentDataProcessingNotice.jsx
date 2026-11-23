@@ -151,7 +151,7 @@ export default function ConsentDataProcessingNotice() {
         "Brand: DisputePaisa",
         "Email: support@disputepaisa.com",
         "Phone/WhatsApp: NA",
-        "Registered Office: 2nd Floor, Plot No - 3, KH. NO. 33/6 AMBERHAI, SECTOR-19, DWARKA, NEW DELHI - 110043",
+        "Registered Office: 3rd floor, amberhai, Plot no.3, Sector 19, Nanda Enclave, Dwarka, Delhi, 110075",
        
       ],
     },

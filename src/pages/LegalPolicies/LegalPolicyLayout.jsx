@@ -2,14 +2,42 @@ import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 
 function formatPolicyText(text) {
-  return text.replace(/\[([^\]]+)\]/g, (placeholder, field) => {
+  const formattedText = text.replace(/\[([^\]]+)\]/g, (placeholder, field) => {
     const normalizedField = field.toLowerCase();
 
     if (normalizedField.includes("legal") || normalizedField.includes("company")) {
       return "TELERING PROCESS PRIVATE LIMITED";
     }
+    if (normalizedField.includes("address") || normalizedField.includes("office")) {
+      return "3rd floor, amberhai, Plot no.3, Sector 19, Nanda Enclave, Dwarka, Delhi, 110075";
+    }
+    if (normalizedField.includes("email")) {
+      return "support@disputepaisa.com";
+    }
+    if (normalizedField.includes("phone") || normalizedField.includes("contact number")) {
+      return "+91 81309 09462";
+    }
     return "NA";
   });
+
+  return formattedText
+    .replace(/Phone\/WhatsApp: NA/g, "Phone/WhatsApp: +91 81309 09462")
+    .replace(/Phone: NA/g, "Phone: +91 81309 09462");
+}
+
+const contactSectionPattern = /contact information|contact details|contact us|contact and grievances|company and contact details/i;
+const contactDetailPattern = /^(brand|company|legal entity|email|privacy email|grievance email|support email|refund email|phone|phone\/whatsapp|address|postal address|registered office|website|partner support email|privacy \/ data protection contact|grievance contact):/i;
+
+function removeRepeatedContactDetails(sections) {
+  return sections
+    .filter((section) => !contactSectionPattern.test(section.title))
+    .map((section) => ({
+      ...section,
+      paragraphs: section.paragraphs?.filter((text) => !contactDetailPattern.test(text)),
+      paragraphs2: section.paragraphs2?.filter((text) => !contactDetailPattern.test(text)),
+      items: section.items?.filter((text) => !contactDetailPattern.test(text)),
+      orderedItems: section.orderedItems?.filter((text) => !contactDetailPattern.test(text)),
+    }));
 }
 
 export default function LegalPolicyLayout({
@@ -19,6 +47,8 @@ export default function LegalPolicyLayout({
   effectiveDate = "06/10/2026",
   lastUpdated = "06/10/2026",
 }) {
+  const visibleSections = removeRepeatedContactDetails(sections);
+
   return (
     <main className="min-h-screen bg-white">
       <section className="section-soft">
@@ -45,7 +75,7 @@ export default function LegalPolicyLayout({
 
       <section className="section-shell py-10 sm:py-14 lg:py-16">
         <div className="mx-auto max-w-4xl space-y-5">
-          {sections.map((section, index) => (
+          {visibleSections.map((section, index) => (
             <article key={`${section.title}-${index}`} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-card sm:p-8">
               <h2 className="text-[16px] font-extrabold text-brand-900 sm:text-[18px]">{formatPolicyText(section.title)}</h2>
               {section.paragraphs?.length ? (
@@ -78,8 +108,18 @@ export default function LegalPolicyLayout({
               ) : null}
             </article>
           ))}
+          <article className="rounded-2xl border border-blue-100 bg-blue-50/60 p-5 sm:p-8">
+            <h2 className="text-[16px] font-extrabold text-brand-900 sm:text-[18px]">Contact Information</h2>
+            <ul className="mt-3 space-y-2 text-sm leading-7 text-slate-600">
+              <li>Company: TELERING PROCESS PRIVATE LIMITED</li>
+              <li>Brand: DisputePaisa</li>
+              <li>Email: <a href="mailto:support@disputepaisa.com" className="font-semibold text-brand-600 hover:text-brand-700">support@disputepaisa.com</a></li>
+              <li>Phone/WhatsApp: <a href="tel:+918130909462" className="font-semibold text-brand-600 hover:text-brand-700">+91 81309 09462</a></li>
+              <li>Address: 3rd floor, amberhai, Plot no.3, Sector 19, Nanda Enclave, Dwarka, Delhi, 110075</li>
+            </ul>
+          </article>
           <p className="px-1 pt-2 text-sm text-slate-500">
-            Questions about this policy? Contact our support team.
+            Questions about this policy? Please use the Contact Information below.
           </p>
           <Link to="/privacy-center" className="inline-flex items-center gap-1 pt-2 text-sm font-bold text-brand-600 hover:text-brand-700">
             <ChevronRight size={16} className="rotate-180" />

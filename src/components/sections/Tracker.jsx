@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "../ui/Button";
+import { motion, Reveal } from "../ui/Motion";
 const trackStatusPhone = "/assets/track-status-phone.png";
 
 // Same Web app URL used by QueryForm.jsx
@@ -62,7 +63,7 @@ export default function Tracker() {
   return (
     <section id="track" className="section-shell py-10 md:py-12 lg:py-14 track-section">
       <div className="track-box w-full">
-        <div className="relative z-10 w-full max-w-xl xl:max-w-2xl">
+        <Reveal className="relative z-10 w-full max-w-xl xl:max-w-2xl">
           <h2 className="section-title">Track Your Query</h2>
           <p className="section-copy mt-2">
             Enter your query reference number to check the latest status of your request.
@@ -98,9 +99,11 @@ export default function Tracker() {
               <div className="mt-4 text-xs font-bold uppercase tracking-wider text-slate-500">Status</div>
               <div className="mt-1 text-sm font-extrabold text-brand-700">{result.status}</div>
               <div className="mt-3 h-2 overflow-hidden rounded-full bg-slate-100">
-                <div
+                <motion.div
                   className="h-full rounded-full bg-brand-500 transition-all"
-                  style={{ width: `${statusProgressPercent(result.status)}%` }}
+                  initial={{ width: 0 }}
+                  animate={{ width: `${statusProgressPercent(result.status)}%` }}
+                  transition={{ duration: .8, ease: [0.22, 1, 0.36, 1] }}
                 />
               </div>
               <div className="mt-3 flex justify-between text-[10px] text-slate-400">
@@ -108,7 +111,7 @@ export default function Tracker() {
               </div>
             </div>
           )}
-        </div>
+        </Reveal>
 
         <img
           src={trackStatusPhone}

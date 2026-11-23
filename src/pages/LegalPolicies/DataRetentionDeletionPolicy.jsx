@@ -141,18 +141,6 @@ export default function DataRetentionDeletionPolicy() {
         "The company should maintain an approved retention schedule identifying the relevant data category, retention trigger, retention period, responsible team, and deletion method.",
       ],
     },
-    {
-      title: "16. Contact Information",
-      paragraphs: [
-        "Brand: Dispute Paisa",
-        "Website: https://disputepaisa.com",
-        "Legal Entity: [Insert Full Legal Entity Name]",
-        "Privacy / Data Protection Contact: [Insert Name or Designation]",
-        "Email: [Insert Official Email Address]",
-        "Registered Office: [Insert Registered Office Address]",
-        "Disclaimer: This policy is a general operational draft and should be reviewed by qualified legal and technical professionals before publication or implementation. The company must confirm actual retention periods and deletion capabilities before representing them as established practices.",
-      ],
-    },
   ];
 
   return (

@@ -120,7 +120,7 @@ export default function HowItWorks() {
 
           <section className="how-issues-section section-shell pb-16 pt-14 lg:pb-20 lg:pt-16">
             <div className="mx-auto max-w-[1450px]"><p className="eyebrow"><span className="h-px w-6 bg-brand-500" />Common banking issues</p><div className="mt-2 flex items-end justify-between"><div><h2 className="text-[29px] font-extrabold tracking-[-.04em] text-brand-900">Facing any of these banking problems?</h2><p className="mt-1 text-sm text-slate-500">Select a category to learn more or raise a query directly.</p></div><a href="/#services" className="text-sm font-bold text-brand-500">View all issues <ArrowRight className="ml-1 inline" size={16} /></a></div>
-              <div className="mt-5 grid grid-cols-3 gap-3 lg:grid-cols-6">{issues.slice(0, 6).map(({ title, text, icon: Icon }) => <a href="/#query" key={title} className="how-issue-card"><div className="grid h-11 w-11 place-items-center rounded-full bg-brand-100 text-brand-500"><Icon size={21} /></div><h3>{title}</h3><p>{text}</p><ArrowRight size={16} /></a>)}</div>
+              <div className="mt-5 grid grid-cols-3 gap-3 lg:grid-cols-6">{issues.slice(0, 6).map(({ title, text, icon: Icon, bgGradient, iconColor, shadowColor }) => <a href="/#query" key={title} className="how-issue-card"><div className={`grid h-11 w-11 place-items-center rounded-2xl ${iconColor || "text-white"}`} style={{ background: bgGradient, boxShadow: shadowColor ? `0 6px 14px ${shadowColor}` : undefined }}><Icon size={21} strokeWidth={2.2} /></div><h3>{title}</h3><p>{text}</p><ArrowRight size={16} /></a>)}</div>
             </div>
           </section>
         </div>

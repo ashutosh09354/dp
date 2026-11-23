@@ -51,11 +51,11 @@ export default function Footer() {
             <div className="footer-links">
               <Link to="/privacy-center">Privacy Center</Link>
               <span className="mt-2">support@disputepaisa.com</span>
-              <span>+91 XXXXX XXXXX</span>
+              <span>+91 81309 09462</span>
               <address className="not-italic leading-6">
-                2nd Floor, Plot No - 3, KH. NO. 33/6 AMBERHAI,
+                3rd floor, amberhai, Plot no.3, Sector 19, Nanda Enclave,
                 <br />
-                SECTOR-19, DWARKA, NEW DELHI - 110043
+                Dwarka, Delhi, 110075
               </address>
             </div>
           </div>

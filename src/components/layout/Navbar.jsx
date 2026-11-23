@@ -1,14 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navLinks } from "../../data/constants";
 import { Menu, X } from "lucide-react";
 import Logo from "../ui/Logo";
 import Button from "../ui/Button";
+import { motion } from "../ui/Motion";
+import { useLocation } from "react-router-dom";
 
 export default function Navbar() {
+  const { pathname, hash } = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-100 bg-white">
+    <header className={`site-header sticky top-0 z-50 w-full border-b border-slate-100 bg-white ${scrolled ? "site-header-scrolled" : ""}`}>
       <div className="section-shell flex h-[72px] items-center justify-between">
         <Logo />
         <button
@@ -21,13 +32,17 @@ export default function Navbar() {
           {isMenuOpen ? <X size={23} /> : <Menu size={24} />}
         </button>
         <nav className="hidden items-center gap-8 lg:flex">
-          {navLinks.map(([label, href]) => (
-            <a key={label} href={href} className="nav-link">{label}</a>
-          ))}
+          {navLinks.map(([label, href], index) => {
+            const active = (label === "Home" && pathname === "/" && (!hash || hash === "#home")) || (label === "Track Query" && hash === "#track") || (label === "Contact" && hash === "#query") || (label === "About" && pathname === "/about") || (label === "How It Works" && pathname === "/how-it-works");
+            return <motion.a key={label} href={href} className={`nav-link ${active ? "nav-link-active" : ""}`} whileHover={{ y: -1 }} transition={{ duration: 0.18 }}>
+              {label}
+              <span className="nav-link-indicator" style={{ transitionDelay: `${index * 18}ms` }} />
+            </motion.a>;
+          })}
         </nav>
         <div className="hidden items-center gap-3 lg:flex">
           {/* <Button variant="outline" href="/login" className="px-4 py-2.5 text-brand-500">Login</Button> */}
-          <Button href="/#query" className="px-4 py-2.5">Raise a Query</Button>
+          <Button href="/#query" className="px-4 py-2.5" motionEffect>Raise a Query</Button>
         </div>
       </div>
 

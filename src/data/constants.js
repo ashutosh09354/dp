@@ -4,14 +4,70 @@ import {
 } from "lucide-react";
 
 export const issues = [
-  { title: "Transaction Issues", text: "Raise concerns regarding failed, pending or disputed transactions.", icon: CreditCard },
-  { title: "Account Related", text: "Get guidance regarding account restrictions, freezes and blocks.", icon: UserRound },
-  { title: "Banking Services", text: "Assistance with banking services and account-related concerns.", icon: Building2 },
-  { title: "Card Disputes", text: "Help with debit/credit card disputes and unauthorized charges.", icon: WalletCards },
-  { title: "Refund & Reversal", text: "Assistance regarding refund delays and transaction reversals.", icon: RotateCcw },
-  { title: "Loan & EMI Issues", text: "Guidance on loan, EMI and repayment-related banking concerns.", icon: Banknote },
-  { title: "Fraud & Unauthorized Use", text: "Report and get help with fraudulent or unauthorized transactions.", icon: ShieldAlert },
-  { title: "Other Banking Concerns", text: "Tell us about any other banking-related issue you're facing.", icon: Grid2X2 },
+  {
+    title: "Transaction Issues",
+    text: "Raise concerns regarding failed, pending or disputed transactions.",
+    icon: CreditCard,
+    bgGradient: "linear-gradient(135deg, #459bfc 0%, #0565ee 100%)",
+    iconColor: "text-white",
+    shadowColor: "rgba(5, 101, 238, 0.32)",
+  },
+  {
+    title: "Account Related",
+    text: "Get guidance regarding account restrictions, freezes and blocks.",
+    icon: UserRound,
+    bgGradient: "linear-gradient(135deg, #e4defe 0%, #bcaffc 100%)",
+    iconColor: "text-[#625bf4]",
+    shadowColor: "rgba(188, 175, 252, 0.45)",
+  },
+  {
+    title: "Banking Services",
+    text: "Assistance with banking services and account-related concerns.",
+    icon: Building2,
+    bgGradient: "linear-gradient(135deg, #51cfbe 0%, #01aa97 100%)",
+    iconColor: "text-white",
+    shadowColor: "rgba(1, 170, 151, 0.32)",
+  },
+  {
+    title: "Card Disputes",
+    text: "Help with debit/credit card disputes and unauthorized charges.",
+    icon: WalletCards,
+    bgGradient: "linear-gradient(135deg, #fec367 0%, #fd8e0c 100%)",
+    iconColor: "text-white",
+    shadowColor: "rgba(253, 142, 12, 0.32)",
+  },
+  {
+    title: "Refund & Reversal",
+    text: "Assistance regarding refund delays and transaction reversals.",
+    icon: RotateCcw,
+    bgGradient: "linear-gradient(135deg, #f873a7 0%, #da357f 100%)",
+    iconColor: "text-white",
+    shadowColor: "rgba(218, 53, 127, 0.32)",
+  },
+  {
+    title: "Loan & EMI Issues",
+    text: "Guidance on loan, EMI and repayment-related banking concerns.",
+    icon: Banknote,
+    bgGradient: "linear-gradient(135deg, #60acfe 0%, #0d6dee 100%)",
+    iconColor: "text-white",
+    shadowColor: "rgba(13, 109, 238, 0.32)",
+  },
+  {
+    title: "Fraud & Unauthorized Use",
+    text: "Report and get help with fraudulent or unauthorized transactions.",
+    icon: ShieldAlert,
+    bgGradient: "linear-gradient(135deg, #a99cfb 0%, #7a6af6 100%)",
+    iconColor: "text-white",
+    shadowColor: "rgba(122, 106, 246, 0.32)",
+  },
+  {
+    title: "Other Banking Concerns",
+    text: "Tell us about any other banking-related issue you're facing.",
+    icon: Grid2X2,
+    bgGradient: "linear-gradient(135deg, #9fd673 0%, #55aa22 100%)",
+    iconColor: "text-white",
+    shadowColor: "rgba(85, 170, 34, 0.32)",
+  },
 ];
 
 export const assistanceFeatures = [

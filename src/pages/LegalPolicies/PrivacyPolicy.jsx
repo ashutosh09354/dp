@@ -32,7 +32,7 @@ export default function PrivacyPolicy() {
           items: [
             "Legal Entity: TELERING PROCESS PRIVATE LIMITED",
             "Brand: DisputePaisa",
-            "Registered Office: 2nd Floor, Plot No - 3, KH. NO. 33/6 AMBERHAI, SECTOR-19, DWARKA, NEW DELHI - 110043",
+            "Registered Office: 3rd floor, amberhai, Plot no.3, Sector 19, Nanda Enclave, Dwarka, Delhi, 110075",
             "Website: https://disputepaisa.com",
             "Email: support@disputepaisa.com",
             "Phone: NA"
@@ -692,7 +692,7 @@ export default function PrivacyPolicy() {
             "Email: support@disputepaisa.com",
             
             "Phone: NA",
-            "Registered Office: 2nd Floor, Plot No - 3, KH. NO. 33/6 AMBERHAI, SECTOR-19, DWARKA, NEW DELHI - 110043"
+            "Registered Office: 3rd floor, amberhai, Plot no.3, Sector 19, Nanda Enclave, Dwarka, Delhi, 110075",
           ]
         },
         {

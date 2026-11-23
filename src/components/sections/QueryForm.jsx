@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { issues, queryBenefits } from "../../data/constants";
 import Button from "../ui/Button";
+import { motion } from "../ui/Motion";
 
 // Paste the Web App URL you copied after deploying the Apps Script
 // (the one ending in /exec, NOT the Deployment ID).
@@ -293,7 +294,7 @@ export default function QueryForm({ selectedIssue }) {
               <label key="document" className="upload query-upload sm:col-span-2"><Upload size={30} className="text-brand-500" /><span><b>Upload Documents <i>(Optional)</i></b><small>{fileName || "Click to upload or drag and drop PDF, JPG or PNG"}</small></span><input type="file" name="document" accept=".pdf,.jpg,.jpeg,.png" onChange={(e) => setFileName(e.target.files?.[0]?.name || "")} /></label>
             </div>
             {error && <p className="mt-4 text-sm font-semibold text-red-600">{error}</p>}
-            <button type="submit" disabled={submitting} className="mt-5 flex w-full items-center justify-center gap-3 rounded-xl bg-brand-500 py-4 text-base font-extrabold text-white shadow-[0_8px_18px_rgba(20,119,232,.28)] transition hover:bg-brand-600 disabled:cursor-not-allowed disabled:opacity-60">{submitting ? "Submitting..." : "Submit Query"} {submitting ? <ArrowRight size={20} /> : <Send size={20} />}</button>
+            <motion.button type="submit" disabled={submitting} whileHover={submitting ? undefined : { y: -2 }} whileTap={submitting ? undefined : { scale: .99 }} className="mt-5 flex w-full items-center justify-center gap-3 rounded-xl bg-brand-500 py-4 text-base font-extrabold text-white shadow-[0_8px_18px_rgba(20,119,232,.28)] transition hover:bg-brand-600 disabled:cursor-not-allowed disabled:opacity-60">{submitting ? <><span className="form-spinner" aria-hidden="true" />Submitting...</> : <>Submit Query <Send size={20} /></>}</motion.button>
             <p className="mt-5 flex justify-center gap-2 text-center text-sm text-slate-500"><LockKeyhole size={18} className="shrink-0" /> Your information is secure and will only be used to assist you.</p>
           </form>
         </div>

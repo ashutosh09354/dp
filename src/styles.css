@@ -194,14 +194,14 @@ body {
   .section-soft { @apply bg-[#f3f9ff]; }
   .icon-circle { @apply grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand-50 text-brand-500 transition; }
   .problem-card { @apply relative rounded-xl border border-slate-200 bg-white p-5 shadow-[0_12px_28px_rgba(8,41,79,.07)] transition duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-[0_18px_36px_rgba(8,41,79,.13)]; }
-  .problem-card h3 { @apply mt-4 text-[11.05px] font-extrabold text-brand-900; }
+  .problem-card h3 { @apply mt-0 text-[14.5px] font-extrabold text-brand-900; }
   .problem-card p { @apply mt-1.5 text-[12px] leading-5 text-slate-500; }
   .mini-service { @apply flex gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-[0_8px_20px_rgba(8,41,79,.06)] transition duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-[0_16px_30px_rgba(8,41,79,.13)]; }
   .mini-service h3 { @apply text-[10.2px] font-extrabold text-brand-900; }
   .mini-service p { @apply mt-1 text-[11px] leading-4 text-slate-500; }
-  .why-card { @apply rounded-xl border border-slate-200 bg-white p-6 shadow-[0_12px_28px_rgba(8,41,79,.07)] transition duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-[0_18px_36px_rgba(8,41,79,.13)]; }
-  .why-card h3 { @apply mt-4 text-[10.2px] font-extrabold text-brand-900; }
-  .why-card p { @apply mt-1.5 text-xs leading-5 text-slate-500; }
+  .why-card { @apply rounded-2xl border border-blue-100/70 bg-white p-6 shadow-[0_10px_25px_rgba(20,119,232,.08)] transition duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-[0_16px_35px_rgba(20,119,232,.14)] sm:p-7; }
+  .why-card h3 { @apply mt-0 text-[16.5px] font-extrabold tracking-[-0.02em] text-brand-900; }
+  .why-card p { @apply mt-2 text-[13.5px] leading-relaxed text-slate-600; }
   .field { @apply block; }
   .field span { @apply mb-1.5 block text-xs font-bold text-brand-900; }
   .field input, .field select, .field textarea { @apply w-full rounded-xl border border-slate-200 bg-white px-3.5 py-3 text-sm text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-brand-500 focus:ring-4 focus:ring-brand-100; }
@@ -1498,7 +1498,7 @@ body {
   .problem-card p { font-size: 13.5px; }
   .mini-service h3 { font-size: 14.5px; }
   .mini-service p { font-size: 12.5px; }
-  .why-card h3 { font-size: 14.5px; }
+  .why-card h3 { font-size: 17.5px; }
   .why-card p { font-size: 13.5px; }
   .testimonial-bubble { font-size: 17.5px; }
   .testimonial-author strong { font-size: 18.5px; }
@@ -1543,4 +1543,19 @@ body {
     height: auto !important;
     min-height: 0 !important;
   }
+}
+
+/* Motion polish: transform/opacity based so animations do not cause layout shifts. */
+.site-header .nav-link { position: relative; }
+.site-header { transition: box-shadow .25s ease, border-color .25s ease; }
+.site-header-scrolled { border-color: #e2eaf3; box-shadow: 0 8px 24px rgba(11,35,69,.07); }
+.site-header .nav-link-indicator { position: absolute; left: 0; right: 100%; bottom: -8px; height: 2px; border-radius: 99px; background: #1265c8; transition: right .22s ease; }
+.site-header .nav-link:hover .nav-link-indicator { right: 0; }
+.site-header .nav-link-active .nav-link-indicator { right: 0; }
+.hero-line { display: inline-block; color: inherit !important; }
+.hero-line > span { color: #1265c8 !important; }
+.form-spinner { width: 17px; height: 17px; border: 2px solid rgba(255,255,255,.4); border-top-color: #fff; border-radius: 50%; animation: dpSpin .7s linear infinite; }
+@keyframes dpSpin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .form-spinner { animation: none; }
 }

@@ -14,22 +14,26 @@ export default function Button({
   type,
   disabled,
   onClick,
+  motionEffect = false,
 }) {
   const classes = `inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-bold transition ${variants[variant]} ${className} ${disabled ? "cursor-not-allowed opacity-60" : ""}`;
+  const motionProps = motionEffect ? { whileHover: { y: -2 }, whileTap: { scale: 0.98 }, transition: { duration: 0.2 } } : {};
 
   // If a type ("submit"/"button") or onClick is given, render a real <button>
   // so it works inside forms and doesn't just navigate like a link.
   if (type || onClick) {
     return (
-      <button type={type || "button"} className={classes} style={style} disabled={disabled} onClick={onClick}>
+      <motion.button type={type || "button"} className={classes} style={style} disabled={disabled} onClick={onClick} {...motionProps}>
         {children}
-      </button>
+        </motion.button>
     );
   }
 
   return (
-    <a href={href || "#query"} className={classes} style={style}>
+    <motion.a href={href || "#query"} className={classes} style={style} {...motionProps}>
       {children}
-    </a>
+      </motion.a>
   );
 }
+import { motion } from "./Motion";
+

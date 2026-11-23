@@ -179,6 +179,9 @@ export default function PrivacyCenter() {
       </section>
 
       <section className="section-shell py-5 sm:py-6 lg:py-7">
+        <div className="mb-5 rounded-xl border border-blue-100 bg-white px-5 py-4 text-sm text-slate-600 shadow-[0_6px_18px_rgba(20,119,232,0.06)]">
+          Questions about our policies? Contact us at <a href="mailto:support@disputepaisa.com" className="font-semibold text-brand-600 hover:text-brand-700">support@disputepaisa.com</a> or <a href="tel:+918130909462" className="font-semibold text-brand-600 hover:text-brand-700">+91 81309 09462</a>.
+        </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-4">
           {categories.map((category) => (
             <PolicyCard key={category.title} category={category} />

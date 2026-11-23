@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Plus, Star } from "lucide-react";
+import { AnimatePresence, motion, useReducedMotion } from "../ui/Motion";
 
 import { faqs } from "../../data/constants";
 
@@ -70,6 +71,7 @@ const testimonials = [
 ];
 
 export default function SocialProof() {
+  const reduced = useReducedMotion();
   const [open, setOpen] = useState(-1);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -125,9 +127,14 @@ export default function SocialProof() {
 
           <div className="testimonial-viewport">
 
-            <div
+            <AnimatePresence mode="wait" initial={false}>
+            <motion.div
               key={activeIndex}
               className="testimonial-stack"
+              initial={reduced ? false : { opacity: 0, x: 18 }}
+              animate={reduced ? undefined : { opacity: 1, x: 0 }}
+              exit={reduced ? undefined : { opacity: 0, x: -18 }}
+              transition={reduced ? { duration: 0 } : { duration: .42, ease: [0.22, 1, 0.36, 1] }}
             >
 
               {/* FIRST TESTIMONIAL */}
@@ -142,7 +149,8 @@ export default function SocialProof() {
   />
 </div>
 
-            </div>
+            </motion.div>
+            </AnimatePresence>
 
           </div>
 
@@ -202,11 +210,13 @@ export default function SocialProof() {
 
                   </button>
 
+                  <AnimatePresence initial={false}>
                   {isOpen && (
-                    <div className="faq-answer">
+                    <motion.div className="faq-answer" initial={reduced ? false : { opacity: 0, height: 0 }} animate={reduced ? undefined : { opacity: 1, height: "auto" }} exit={reduced ? undefined : { opacity: 0, height: 0 }} transition={reduced ? { duration: 0 } : { duration: .24 }}>
                       {answer}
-                    </div>
+                    </motion.div>
                   )}
+                  </AnimatePresence>
 
                 </div>
               );
