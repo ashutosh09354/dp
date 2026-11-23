@@ -80,7 +80,7 @@ export const assistanceFeatures = [
 export const faqs = [
   {
     question: "What type of banking problems can I raise?",
-    answer: "You can raise issues related to failed UPI/ATM transactions, unauthorized debits, delayed refunds, blocked or frozen accounts, credit/debit card disputes, loan/EMI discrepancies, and improper bank charges."
+    answer: "You can raise issues related to transactions, account operations, cards, loans, customer service, KYC and other banking-related concerns."
   },
   {
     question: "How do I submit a query?",
